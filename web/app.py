@@ -2,8 +2,9 @@
 
 import os
 import sys
+import secrets
 from datetime import datetime
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session
 from flask_cors import CORS
 
 # Ensure root directory is in sys.path
@@ -32,7 +33,8 @@ app = Flask(
     template_folder=os.path.join(os.path.dirname(__file__), "templates"),
     static_folder=os.path.join(os.path.dirname(__file__), "static")
 )
-CORS(app)
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", secrets.token_hex(16))
+CORS(app, supports_credentials=True)
 
 # Initialize the reservation system
 reservation_system = ReservationSystem()
@@ -44,9 +46,92 @@ def index():
     return render_template("index.html")
 
 
+# -------------------------------------------------------------
+# Authentication APIs
+# -------------------------------------------------------------
+
+@app.route("/api/auth/signup", methods=["POST"])
+def auth_signup():
+    """Register a new user account."""
+    data = request.get_json() or {}
+    name = data.get("name", "").strip()
+    phone = data.get("phone", "").strip()
+    email = data.get("email", "").strip().lower()
+    password = data.get("password", "")
+
+    if not name or not phone or not email or not password:
+        return jsonify({"success": False, "error": "All fields (name, phone, email, password) are required."}), 400
+
+    if len(password) < 4:
+        return jsonify({"success": False, "error": "Password must be at least 4 characters long."}), 400
+
+    try:
+        user = reservation_system.register_user(name, phone, email, password)
+        session["user_email"] = user.email
+        return jsonify({
+            "success": True,
+            "message": "Account created successfully!",
+            "user": user.to_dict()
+        }), 201
+    except ValueError as e:
+        return jsonify({"success": False, "error": str(e)}), 400
+    except Exception as e:
+        return jsonify({"success": False, "error": f"Registration failed: {str(e)}"}), 500
+
+
+@app.route("/api/auth/signin", methods=["POST"])
+def auth_signin():
+    """Authenticate an existing user."""
+    data = request.get_json() or {}
+    email_or_phone = data.get("email_or_phone", "").strip()
+    password = data.get("password", "")
+
+    if not email_or_phone or not password:
+        return jsonify({"success": False, "error": "Please provide email/phone and password."}), 400
+
+    try:
+        user = reservation_system.authenticate_user(email_or_phone, password)
+        session["user_email"] = user.email
+        return jsonify({
+            "success": True,
+            "message": f"Welcome back, {user.name}!",
+            "user": user.to_dict()
+        })
+    except ValueError as e:
+        return jsonify({"success": False, "error": str(e)}), 401
+    except Exception as e:
+        return jsonify({"success": False, "error": f"Login failed: {str(e)}"}), 500
+
+
+@app.route("/api/auth/me", methods=["GET"])
+def auth_me():
+    """Get current logged in user session."""
+    user_email = session.get("user_email")
+    if not user_email or user_email not in reservation_system.users:
+        return jsonify({"success": False, "authenticated": False, "user": None})
+
+    user = reservation_system.users[user_email]
+    return jsonify({
+        "success": True,
+        "authenticated": True,
+        "user": user.to_dict()
+    })
+
+
+@app.route("/api/auth/logout", methods=["POST"])
+def auth_logout():
+    """Clear user session."""
+    session.pop("user_email", None)
+    return jsonify({"success": True, "message": "Logged out successfully."})
+
+
+# -------------------------------------------------------------
+# Location & Bus APIs
+# -------------------------------------------------------------
+
 @app.route("/api/locations", methods=["GET"])
 def get_locations():
-    """Return available source towns and destinations."""
+    """Return available source towns/villages and destinations."""
     return jsonify({
         "success": True,
         "sources": GOA_TOWNS,
@@ -58,7 +143,6 @@ def get_locations():
 @app.route("/api/buses", methods=["GET"])
 def get_buses():
     """List buses with optional filters for source, destination, date, and bus type."""
-    # Perform rollover check if date changed
     reservation_system.rollover_if_needed()
 
     source = request.args.get("source", "").strip()
@@ -151,15 +235,21 @@ def get_bus_details(bus_id):
         return jsonify({"success": False, "error": str(e)}), 404
 
 
+# -------------------------------------------------------------
+# Booking & Payment APIs
+# -------------------------------------------------------------
+
 @app.route("/api/bookings", methods=["POST"])
 def create_booking():
-    """Book seats on a bus."""
+    """Book seats on a bus with payment processing."""
     data = request.get_json() or {}
     bus_id = data.get("bus_id", "").strip()
     name = data.get("name", "").strip()
     phone = data.get("phone", "").strip()
     email = data.get("email", "").strip()
     seat_numbers = data.get("seats", [])
+    payment_mode = data.get("payment_mode", "UPI (GPay / PhonePe)").strip()
+    transaction_id = data.get("transaction_id", "").strip()
 
     if not bus_id:
         return jsonify({"success": False, "error": "Bus ID is required"}), 400
@@ -169,7 +259,6 @@ def create_booking():
         return jsonify({"success": False, "error": "At least one seat must be selected"}), 400
 
     try:
-        # Convert seats to integers
         seat_numbers = [int(s) for s in seat_numbers]
     except ValueError:
         return jsonify({"success": False, "error": "Invalid seat numbers format"}), 400
@@ -197,16 +286,27 @@ def create_booking():
             bus_id=bus.bus_id,
             seat_numbers=seat_numbers,
             booking_time=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            total_fare=total_fare
+            total_fare=total_fare,
+            payment_mode=payment_mode,
+            payment_status="Confirmed (Paid)",
+            transaction_id=transaction_id
         )
 
         reservation_system.reservations[booking_id] = reservation
         reservation_system.fm.save_buses(reservation_system.buses)
         reservation_system.fm.save_reservations(reservation_system.reservations)
 
+        # Auto-register user if not already in system
+        if email.lower() not in reservation_system.users:
+            try:
+                reservation_system.users[email.lower()] = user
+                reservation_system.fm.save_users(reservation_system.users)
+            except Exception:
+                pass
+
         return jsonify({
             "success": True,
-            "message": "Booking successful!",
+            "message": "Payment verified & ticket booked successfully!",
             "reservation": reservation.to_dict(),
             "bus_details": {
                 "name": bus.name,
@@ -243,7 +343,6 @@ def list_reservations():
         res_dict["bus_info"] = bus_info
         result.append(res_dict)
 
-    # Sort latest first
     result.sort(key=lambda x: x.get("booking_time", ""), reverse=True)
 
     return jsonify({
@@ -287,7 +386,6 @@ def cancel_reservation(booking_id):
         seats_to_cancel = data.get("seats")
 
         if not seats_to_cancel:
-            # Cancel all seats in this reservation
             seats_to_cancel = reservation.seat_numbers.copy()
         else:
             seats_to_cancel = [int(s) for s in seats_to_cancel]
@@ -363,6 +461,10 @@ def search_reservations():
         "reservations": matches
     })
 
+
+# -------------------------------------------------------------
+# Occupancy Reports APIs
+# -------------------------------------------------------------
 
 @app.route("/api/reports/occupancy/<bus_id>", methods=["GET"])
 def bus_occupancy_report(bus_id):

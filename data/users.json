@@ -1,0 +1,16 @@
+{
+  "arnav@example.com": {
+    "user_id": "USR-7A6F8F62",
+    "name": "Arnav Kamat",
+    "phone": "9876543210",
+    "email": "arnav@example.com",
+    "password_hash": "a8c2880a75b6cc7c9b89bd807deeceaff60ec895640c3ad9e4a2d6f8e93655fd"
+  },
+  "priya.sharma@example.com": {
+    "user_id": "USR-714FEF6F",
+    "name": "Priya Sharma",
+    "phone": "9811223344",
+    "email": "priya.sharma@example.com",
+    "password_hash": "ec4ba681401198d1db2faff944950b4b4f468a9c410f83c99ea2b3a4163d1e4a"
+  }
+}
