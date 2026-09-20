@@ -1,31 +1,89 @@
 # utils/constants.py
 
 # -------------------------------------------------
-# GOA TOWNS (sources of buses)
+# GOA TOWNS & VILLAGES (North & South Goa Coverage)
 # -------------------------------------------------
 
 GOA_TOWNS = [
+    # North Goa Major Hubs
     "Panaji",
-    "Margao",
-    "Vasco da Gama",
     "Mapusa",
+    "Porvorim",
     "Ponda",
     "Bicholim",
-    "Curchorem",
-    "Canacona",
-    "Calangute",
+    "Sanquelim",
     "Valpoi",
     "Pernem",
-    "Quepem",
-    "Sanquelim",
-    "Sanguem",
-    "Mormugao",
+
+    # North Goa Coastal & Tourist Villages
+    "Calangute",
+    "Candolim",
+    "Baga",
+    "Anjuna",
+    "Vagator",
+    "Arambol",
+    "Morjim",
+    "Mandrem",
+    "Siolim",
+    "Assagao",
+    "Kerim",
+
+    # North Goa Hinterland & Riverine Villages
+    "Aldona",
+    "Colvale",
+    "Tivim",
+    "Moira",
+    "Marcel",
+    "Old Goa",
+    "Ribandar",
+    "Britona",
+    "Honda",
+    "Usgao",
+
+    # South Goa Major Hubs
+    "Margao",
+    "Vasco da Gama",
     "Cortalim",
     "Cuncolim",
-    "Fatorda",
+    "Curchorem",
+    "Canacona",
+    "Quepem",
+    "Sanguem",
+    "Mormugao",
+
+    # South Goa Coastal & Beach Villages
     "Colva",
-    "Arambol"
+    "Benaulim",
+    "Majorda",
+    "Betalbatim",
+    "Varca",
+    "Cavelossim",
+    "Palolem",
+    "Agonda",
+    "Patnem",
+    "Chaudi",
+    "Bogmalo",
+
+    # South Goa Hinterland Villages
+    "Fatorda",
+    "Navelim",
+    "Nuvem",
+    "Chinchinim",
+    "Balli",
+    "Rivona",
+    "Sanvordem",
+    "Shiroda",
+    "Borim",
+    "Curtorim",
+    "Raia",
+    "Loutolim",
+    "Verna",
+    "Chicalim",
+    "Dabolim"
 ]
+
+# Ensure uniqueness while preserving order
+GOA_TOWNS = list(dict.fromkeys(GOA_TOWNS))
 
 
 # -------------------------------------------------
@@ -33,23 +91,33 @@ GOA_TOWNS = [
 # -------------------------------------------------
 
 OUTSTATION_CITIES = [
+    # Maharashtra
     "Mumbai",
     "Pune",
+    "Kolhapur",
+    "Belgaum",
+    "Nashik",
+    "Solapur",
+    "Ratnagiri",
+    "Sawantwadi",
+    "Kankavli",
+
+    # Karnataka
     "Bangalore",
-    "Hyderabad",
-    "Chennai",
     "Mangalore",
     "Hubli",
-    "Belgaum",
-    "Kolhapur",
-    "Nashik",
-    "Aurangabad",
-    "Solapur",
+    "Dharwad",
     "Mysore",
     "Udupi",
-    "Dharwad"
+    "Karwar",
+    "Gokarna",
+
+    # Telangana & Tamil Nadu
+    "Hyderabad",
+    "Chennai"
 ]
 
+OUTSTATION_CITIES = list(dict.fromkeys(OUTSTATION_CITIES))
 
 ALL_DESTINATIONS = GOA_TOWNS + OUTSTATION_CITIES
 
@@ -59,35 +127,23 @@ ALL_DESTINATIONS = GOA_TOWNS + OUTSTATION_CITIES
 # -------------------------------------------------
 
 BUS_OPERATORS = [
-    "Kadamba",
-    "Konkan",
-    "Deccan",
-    "Coastal",
-    "Sahyadri",
-    "Mandovi",
-    "Zuari",
-    "Gomantak",
-    "Salcete",
-    "Bardez"
-]
-
-
-BUS_SUFFIXES = [
-    "Express",
-    "Cruiser",
-    "Deluxe",
-    "Travels",
-    "Liner",
-    "Shuttle",
-    "Runner",
-    "Swift",
-    "Link",
-    "Star"
+    "Kadamba Transport (KTC)",
+    "Paulo Travels",
+    "Naik Tours & Travels",
+    "Goa Express Shuttle",
+    "Konkan Kanya Travels",
+    "Mandovi Luxury Cruiser",
+    "Zuari Link Lines",
+    "Gomantak Superfast",
+    "VRL Travels",
+    "Seabird Tourists",
+    "IntrCity SmartBus",
+    "Sahyadri Coastal Express"
 ]
 
 
 # -------------------------------------------------
-# DESTINATION CATEGORIES
+# DESTINATION CATEGORIES & FARES
 # -------------------------------------------------
 
 LONG_HAUL = {
@@ -97,10 +153,8 @@ LONG_HAUL = {
     "Hyderabad",
     "Chennai",
     "Nashik",
-    "Aurangabad",
     "Solapur"
 }
-
 
 MEDIUM_HAUL = {
     "Mangalore",
@@ -109,38 +163,24 @@ MEDIUM_HAUL = {
     "Kolhapur",
     "Mysore",
     "Udupi",
-    "Dharwad"
+    "Dharwad",
+    "Ratnagiri",
+    "Karwar",
+    "Gokarna",
+    "Sawantwadi",
+    "Kankavli"
 }
 
-
-# -------------------------------------------------
-# FARE RANGES
-# -------------------------------------------------
-
-FARE_LOCAL = (30, 90)
-
-FARE_MEDIUM = (350, 700)
-
-FARE_LONG = (650, 1400)
-
-
-# -------------------------------------------------
-# BUS TYPES
-# -------------------------------------------------
+FARE_LOCAL = (40, 120)
+FARE_MEDIUM = (350, 750)
+FARE_LONG = (800, 1600)
 
 BUS_TYPES = [
     "Seater",
     "Sleeper"
 ]
 
-
-# Sleeper fare multiplier
-SLEEPER_MULTIPLIER = 1.6
-
-
-# -------------------------------------------------
-# SEAT TYPES
-# -------------------------------------------------
+SLEEPER_MULTIPLIER = 1.5
 
 SEAT_PATTERN = [
     "window",
