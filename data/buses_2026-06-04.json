@@ -1,0 +1,6458 @@
+{
+  "B0001": {
+    "bus_id": "B0001",
+    "name": "Gomantak Swift",
+    "source": "Fatorda",
+    "destination": "Dharwad",
+    "departure_dt": "2026-06-04 14:45",
+    "arrival_dt": "2026-06-04 19:45",
+    "fare": 460,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 2",
+          "phone": "9000000002",
+          "email": "customer2@mail.com"
+        },
+        "booking_id": "PRE00001"
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 2",
+          "phone": "9000000002",
+          "email": "customer2@mail.com"
+        },
+        "booking_id": "PRE00001"
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0002": {
+    "bus_id": "B0002",
+    "name": "Deccan Cruiser",
+    "source": "Sanquelim",
+    "destination": "Nashik",
+    "departure_dt": "2026-06-04 18:00",
+    "arrival_dt": "2026-06-05 10:00",
+    "fare": 1100,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 3",
+          "phone": "9000000003",
+          "email": "customer3@mail.com"
+        },
+        "booking_id": "PRE00002"
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 4",
+          "phone": "9000000004",
+          "email": "customer4@mail.com"
+        },
+        "booking_id": "PRE00003"
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 4",
+          "phone": "9000000004",
+          "email": "customer4@mail.com"
+        },
+        "booking_id": "PRE00003"
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0003": {
+    "bus_id": "B0003",
+    "name": "Konkan Express",
+    "source": "Cuncolim",
+    "destination": "Hubli",
+    "departure_dt": "2026-06-04 22:45",
+    "arrival_dt": "2026-06-05 04:45",
+    "fare": 480,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 5",
+          "phone": "9000000005",
+          "email": "customer5@mail.com"
+        },
+        "booking_id": "PRE00004"
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 5",
+          "phone": "9000000005",
+          "email": "customer5@mail.com"
+        },
+        "booking_id": "PRE00004"
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0004": {
+    "bus_id": "B0004",
+    "name": "Zuari Shuttle",
+    "source": "Cortalim",
+    "destination": "Valpoi",
+    "departure_dt": "2026-06-04 10:45",
+    "arrival_dt": "2026-06-04 12:45",
+    "fare": 30,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 6",
+          "phone": "9000000006",
+          "email": "customer6@mail.com"
+        },
+        "booking_id": "PRE00005"
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 6",
+          "phone": "9000000006",
+          "email": "customer6@mail.com"
+        },
+        "booking_id": "PRE00005"
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 6",
+          "phone": "9000000006",
+          "email": "customer6@mail.com"
+        },
+        "booking_id": "PRE00005"
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0005": {
+    "bus_id": "B0005",
+    "name": "Gomantak Runner",
+    "source": "Pernem",
+    "destination": "Bangalore",
+    "departure_dt": "2026-06-04 09:00",
+    "arrival_dt": "2026-06-04 22:00",
+    "fare": 1330,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0006": {
+    "bus_id": "B0006",
+    "name": "Salcete Runner",
+    "source": "Sanquelim",
+    "destination": "Mormugao",
+    "departure_dt": "2026-06-04 08:00",
+    "arrival_dt": "2026-06-04 10:00",
+    "fare": 30,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 7",
+          "phone": "9000000007",
+          "email": "customer7@mail.com"
+        },
+        "booking_id": "PRE00006"
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 9",
+          "phone": "9000000009",
+          "email": "customer9@mail.com"
+        },
+        "booking_id": "PRE00008"
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 7",
+          "phone": "9000000007",
+          "email": "customer7@mail.com"
+        },
+        "booking_id": "PRE00006"
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 8",
+          "phone": "9000000008",
+          "email": "customer8@mail.com"
+        },
+        "booking_id": "PRE00007"
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 9",
+          "phone": "9000000009",
+          "email": "customer9@mail.com"
+        },
+        "booking_id": "PRE00008"
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 7",
+          "phone": "9000000007",
+          "email": "customer7@mail.com"
+        },
+        "booking_id": "PRE00006"
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 7",
+          "phone": "9000000007",
+          "email": "customer7@mail.com"
+        },
+        "booking_id": "PRE00006"
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0007": {
+    "bus_id": "B0007",
+    "name": "Zuari Shuttle",
+    "source": "Fatorda",
+    "destination": "Sanquelim",
+    "departure_dt": "2026-06-04 06:30",
+    "arrival_dt": "2026-06-04 09:30",
+    "fare": 40,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 11",
+          "phone": "9000000011",
+          "email": "customer11@mail.com"
+        },
+        "booking_id": "PRE00010"
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 11",
+          "phone": "9000000011",
+          "email": "customer11@mail.com"
+        },
+        "booking_id": "PRE00010"
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 10",
+          "phone": "9000000010",
+          "email": "customer10@mail.com"
+        },
+        "booking_id": "PRE00009"
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0008": {
+    "bus_id": "B0008",
+    "name": "Sahyadri Star",
+    "source": "Calangute",
+    "destination": "Canacona",
+    "departure_dt": "2026-06-04 23:15",
+    "arrival_dt": "2026-06-05 02:15",
+    "fare": 70,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 13",
+          "phone": "9000000013",
+          "email": "customer13@mail.com"
+        },
+        "booking_id": "PRE00012"
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 13",
+          "phone": "9000000013",
+          "email": "customer13@mail.com"
+        },
+        "booking_id": "PRE00012"
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 13",
+          "phone": "9000000013",
+          "email": "customer13@mail.com"
+        },
+        "booking_id": "PRE00012"
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 15",
+          "phone": "9000000015",
+          "email": "customer15@mail.com"
+        },
+        "booking_id": "PRE00014"
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 15",
+          "phone": "9000000015",
+          "email": "customer15@mail.com"
+        },
+        "booking_id": "PRE00014"
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 12",
+          "phone": "9000000012",
+          "email": "customer12@mail.com"
+        },
+        "booking_id": "PRE00011"
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 14",
+          "phone": "9000000014",
+          "email": "customer14@mail.com"
+        },
+        "booking_id": "PRE00013"
+      }
+    }
+  },
+  "B0009": {
+    "bus_id": "B0009",
+    "name": "Bardez Swift",
+    "source": "Mapusa",
+    "destination": "Colva",
+    "departure_dt": "2026-06-05 21:30",
+    "arrival_dt": "2026-06-06 00:30",
+    "fare": 40,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 16",
+          "phone": "9000000016",
+          "email": "customer16@mail.com"
+        },
+        "booking_id": "PRE00015"
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 17",
+          "phone": "9000000017",
+          "email": "customer17@mail.com"
+        },
+        "booking_id": "PRE00016"
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0010": {
+    "bus_id": "B0010",
+    "name": "Mandovi Express",
+    "source": "Curchorem",
+    "destination": "Pune",
+    "departure_dt": "2026-06-05 10:30",
+    "arrival_dt": "2026-06-05 20:30",
+    "fare": 1260,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0011": {
+    "bus_id": "B0011",
+    "name": "Salcete Runner",
+    "source": "Curchorem",
+    "destination": "Cortalim",
+    "departure_dt": "2026-06-05 07:45",
+    "arrival_dt": "2026-06-05 10:45",
+    "fare": 30,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 18",
+          "phone": "9000000018",
+          "email": "customer18@mail.com"
+        },
+        "booking_id": "PRE00017"
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 18",
+          "phone": "9000000018",
+          "email": "customer18@mail.com"
+        },
+        "booking_id": "PRE00017"
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 18",
+          "phone": "9000000018",
+          "email": "customer18@mail.com"
+        },
+        "booking_id": "PRE00017"
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 18",
+          "phone": "9000000018",
+          "email": "customer18@mail.com"
+        },
+        "booking_id": "PRE00017"
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0012": {
+    "bus_id": "B0012",
+    "name": "Deccan Shuttle",
+    "source": "Canacona",
+    "destination": "Mumbai",
+    "departure_dt": "2026-06-05 08:45",
+    "arrival_dt": "2026-06-05 21:45",
+    "fare": 1060,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 20",
+          "phone": "9000000020",
+          "email": "customer20@mail.com"
+        },
+        "booking_id": "PRE00019"
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 22",
+          "phone": "9000000022",
+          "email": "customer22@mail.com"
+        },
+        "booking_id": "PRE00021"
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 21",
+          "phone": "9000000021",
+          "email": "customer21@mail.com"
+        },
+        "booking_id": "PRE00020"
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 20",
+          "phone": "9000000020",
+          "email": "customer20@mail.com"
+        },
+        "booking_id": "PRE00019"
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 22",
+          "phone": "9000000022",
+          "email": "customer22@mail.com"
+        },
+        "booking_id": "PRE00021"
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 20",
+          "phone": "9000000020",
+          "email": "customer20@mail.com"
+        },
+        "booking_id": "PRE00019"
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 22",
+          "phone": "9000000022",
+          "email": "customer22@mail.com"
+        },
+        "booking_id": "PRE00021"
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 19",
+          "phone": "9000000019",
+          "email": "customer19@mail.com"
+        },
+        "booking_id": "PRE00018"
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 21",
+          "phone": "9000000021",
+          "email": "customer21@mail.com"
+        },
+        "booking_id": "PRE00020"
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 21",
+          "phone": "9000000021",
+          "email": "customer21@mail.com"
+        },
+        "booking_id": "PRE00020"
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "41": {
+        "seat_number": 41,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "42": {
+        "seat_number": 42,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 19",
+          "phone": "9000000019",
+          "email": "customer19@mail.com"
+        },
+        "booking_id": "PRE00018"
+      },
+      "43": {
+        "seat_number": 43,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "44": {
+        "seat_number": 44,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0013": {
+    "bus_id": "B0013",
+    "name": "Salcete Travels",
+    "source": "Fatorda",
+    "destination": "Panaji",
+    "departure_dt": "2026-06-05 18:00",
+    "arrival_dt": "2026-06-05 20:00",
+    "fare": 30,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 24",
+          "phone": "9000000024",
+          "email": "customer24@mail.com"
+        },
+        "booking_id": "PRE00023"
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 24",
+          "phone": "9000000024",
+          "email": "customer24@mail.com"
+        },
+        "booking_id": "PRE00023"
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 23",
+          "phone": "9000000023",
+          "email": "customer23@mail.com"
+        },
+        "booking_id": "PRE00022"
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0014": {
+    "bus_id": "B0014",
+    "name": "Deccan Travels",
+    "source": "Arambol",
+    "destination": "Margao",
+    "departure_dt": "2026-06-05 23:00",
+    "arrival_dt": "2026-06-06 01:00",
+    "fare": 80,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 26",
+          "phone": "9000000026",
+          "email": "customer26@mail.com"
+        },
+        "booking_id": "PRE00025"
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 25",
+          "phone": "9000000025",
+          "email": "customer25@mail.com"
+        },
+        "booking_id": "PRE00024"
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 26",
+          "phone": "9000000026",
+          "email": "customer26@mail.com"
+        },
+        "booking_id": "PRE00025"
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 25",
+          "phone": "9000000025",
+          "email": "customer25@mail.com"
+        },
+        "booking_id": "PRE00024"
+      }
+    }
+  },
+  "B0015": {
+    "bus_id": "B0015",
+    "name": "Kadamba Deluxe",
+    "source": "Ponda",
+    "destination": "Bicholim",
+    "departure_dt": "2026-06-05 20:15",
+    "arrival_dt": "2026-06-05 23:15",
+    "fare": 40,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 27",
+          "phone": "9000000027",
+          "email": "customer27@mail.com"
+        },
+        "booking_id": "PRE00026"
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 27",
+          "phone": "9000000027",
+          "email": "customer27@mail.com"
+        },
+        "booking_id": "PRE00026"
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 27",
+          "phone": "9000000027",
+          "email": "customer27@mail.com"
+        },
+        "booking_id": "PRE00026"
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 27",
+          "phone": "9000000027",
+          "email": "customer27@mail.com"
+        },
+        "booking_id": "PRE00026"
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0016": {
+    "bus_id": "B0016",
+    "name": "Coastal Shuttle",
+    "source": "Sanquelim",
+    "destination": "Quepem",
+    "departure_dt": "2026-06-05 22:15",
+    "arrival_dt": "2026-06-06 01:15",
+    "fare": 30,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 29",
+          "phone": "9000000029",
+          "email": "customer29@mail.com"
+        },
+        "booking_id": "PRE00028"
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 29",
+          "phone": "9000000029",
+          "email": "customer29@mail.com"
+        },
+        "booking_id": "PRE00028"
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 28",
+          "phone": "9000000028",
+          "email": "customer28@mail.com"
+        },
+        "booking_id": "PRE00027"
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 28",
+          "phone": "9000000028",
+          "email": "customer28@mail.com"
+        },
+        "booking_id": "PRE00027"
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 29",
+          "phone": "9000000029",
+          "email": "customer29@mail.com"
+        },
+        "booking_id": "PRE00028"
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0017": {
+    "bus_id": "B0017",
+    "name": "Bardez Deluxe",
+    "source": "Vasco da Gama",
+    "destination": "Mapusa",
+    "departure_dt": "2026-06-06 20:45",
+    "arrival_dt": "2026-06-06 21:45",
+    "fare": 70,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "41": {
+        "seat_number": 41,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "42": {
+        "seat_number": 42,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "43": {
+        "seat_number": 43,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "44": {
+        "seat_number": 44,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0018": {
+    "bus_id": "B0018",
+    "name": "Gomantak Express",
+    "source": "Sanquelim",
+    "destination": "Quepem",
+    "departure_dt": "2026-06-06 09:15",
+    "arrival_dt": "2026-06-06 11:15",
+    "fare": 40,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 30",
+          "phone": "9000000030",
+          "email": "customer30@mail.com"
+        },
+        "booking_id": "PRE00029"
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 31",
+          "phone": "9000000031",
+          "email": "customer31@mail.com"
+        },
+        "booking_id": "PRE00030"
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 30",
+          "phone": "9000000030",
+          "email": "customer30@mail.com"
+        },
+        "booking_id": "PRE00029"
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 32",
+          "phone": "9000000032",
+          "email": "customer32@mail.com"
+        },
+        "booking_id": "PRE00031"
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 31",
+          "phone": "9000000031",
+          "email": "customer31@mail.com"
+        },
+        "booking_id": "PRE00030"
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 32",
+          "phone": "9000000032",
+          "email": "customer32@mail.com"
+        },
+        "booking_id": "PRE00031"
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 31",
+          "phone": "9000000031",
+          "email": "customer31@mail.com"
+        },
+        "booking_id": "PRE00030"
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 30",
+          "phone": "9000000030",
+          "email": "customer30@mail.com"
+        },
+        "booking_id": "PRE00029"
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 32",
+          "phone": "9000000032",
+          "email": "customer32@mail.com"
+        },
+        "booking_id": "PRE00031"
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 30",
+          "phone": "9000000030",
+          "email": "customer30@mail.com"
+        },
+        "booking_id": "PRE00029"
+      }
+    }
+  },
+  "B0019": {
+    "bus_id": "B0019",
+    "name": "Sahyadri Liner",
+    "source": "Ponda",
+    "destination": "Sanguem",
+    "departure_dt": "2026-06-06 23:30",
+    "arrival_dt": "2026-06-07 01:30",
+    "fare": 60,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 33",
+          "phone": "9000000033",
+          "email": "customer33@mail.com"
+        },
+        "booking_id": "PRE00032"
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0020": {
+    "bus_id": "B0020",
+    "name": "Sahyadri Runner",
+    "source": "Bicholim",
+    "destination": "Arambol",
+    "departure_dt": "2026-06-06 07:00",
+    "arrival_dt": "2026-06-06 09:00",
+    "fare": 30,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0021": {
+    "bus_id": "B0021",
+    "name": "Salcete Link",
+    "source": "Bicholim",
+    "destination": "Mangalore",
+    "departure_dt": "2026-06-06 14:15",
+    "arrival_dt": "2026-06-06 19:15",
+    "fare": 490,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 34",
+          "phone": "9000000034",
+          "email": "customer34@mail.com"
+        },
+        "booking_id": "PRE00033"
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 34",
+          "phone": "9000000034",
+          "email": "customer34@mail.com"
+        },
+        "booking_id": "PRE00033"
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 34",
+          "phone": "9000000034",
+          "email": "customer34@mail.com"
+        },
+        "booking_id": "PRE00033"
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "37": {
+        "seat_number": 37,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "38": {
+        "seat_number": 38,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "39": {
+        "seat_number": 39,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 34",
+          "phone": "9000000034",
+          "email": "customer34@mail.com"
+        },
+        "booking_id": "PRE00033"
+      },
+      "40": {
+        "seat_number": 40,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "41": {
+        "seat_number": 41,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "42": {
+        "seat_number": 42,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "43": {
+        "seat_number": 43,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "44": {
+        "seat_number": 44,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0022": {
+    "bus_id": "B0022",
+    "name": "Konkan Liner",
+    "source": "Valpoi",
+    "destination": "Ponda",
+    "departure_dt": "2026-06-06 21:00",
+    "arrival_dt": "2026-06-06 23:00",
+    "fare": 40,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 35",
+          "phone": "9000000035",
+          "email": "customer35@mail.com"
+        },
+        "booking_id": "PRE00034"
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 36",
+          "phone": "9000000036",
+          "email": "customer36@mail.com"
+        },
+        "booking_id": "PRE00035"
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 36",
+          "phone": "9000000036",
+          "email": "customer36@mail.com"
+        },
+        "booking_id": "PRE00035"
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 36",
+          "phone": "9000000036",
+          "email": "customer36@mail.com"
+        },
+        "booking_id": "PRE00035"
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 35",
+          "phone": "9000000035",
+          "email": "customer35@mail.com"
+        },
+        "booking_id": "PRE00034"
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 35",
+          "phone": "9000000035",
+          "email": "customer35@mail.com"
+        },
+        "booking_id": "PRE00034"
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 35",
+          "phone": "9000000035",
+          "email": "customer35@mail.com"
+        },
+        "booking_id": "PRE00034"
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      }
+    }
+  },
+  "B0023": {
+    "bus_id": "B0023",
+    "name": "Deccan Star",
+    "source": "Valpoi",
+    "destination": "Ponda",
+    "departure_dt": "2026-06-06 18:15",
+    "arrival_dt": "2026-06-06 19:15",
+    "fare": 70,
+    "bus_type": "Sleeper",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 37",
+          "phone": "9000000037",
+          "email": "customer37@mail.com"
+        },
+        "booking_id": "PRE00036"
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 37",
+          "phone": "9000000037",
+          "email": "customer37@mail.com"
+        },
+        "booking_id": "PRE00036"
+      }
+    }
+  },
+  "B0024": {
+    "bus_id": "B0024",
+    "name": "Gomantak Runner",
+    "source": "Pernem",
+    "destination": "Bangalore",
+    "departure_dt": "2026-06-06 08:00",
+    "arrival_dt": "2026-06-06 21:00",
+    "fare": 650,
+    "bus_type": "Seater",
+    "seats": {
+      "1": {
+        "seat_number": 1,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Arnav",
+          "phone": "1234",
+          "email": "sdf"
+        },
+        "booking_id": "BKG-20260604234120"
+      },
+      "2": {
+        "seat_number": 2,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "3": {
+        "seat_number": 3,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "4": {
+        "seat_number": 4,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "5": {
+        "seat_number": 5,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "6": {
+        "seat_number": 6,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "7": {
+        "seat_number": 7,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "8": {
+        "seat_number": 8,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 39",
+          "phone": "9000000039",
+          "email": "customer39@mail.com"
+        },
+        "booking_id": "PRE00038"
+      },
+      "9": {
+        "seat_number": 9,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "10": {
+        "seat_number": 10,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "11": {
+        "seat_number": 11,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 38",
+          "phone": "9000000038",
+          "email": "customer38@mail.com"
+        },
+        "booking_id": "PRE00037"
+      },
+      "12": {
+        "seat_number": 12,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "13": {
+        "seat_number": 13,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "14": {
+        "seat_number": 14,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "15": {
+        "seat_number": 15,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 39",
+          "phone": "9000000039",
+          "email": "customer39@mail.com"
+        },
+        "booking_id": "PRE00038"
+      },
+      "16": {
+        "seat_number": 16,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "17": {
+        "seat_number": 17,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "18": {
+        "seat_number": 18,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "19": {
+        "seat_number": 19,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "20": {
+        "seat_number": 20,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "21": {
+        "seat_number": 21,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "22": {
+        "seat_number": 22,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 39",
+          "phone": "9000000039",
+          "email": "customer39@mail.com"
+        },
+        "booking_id": "PRE00038"
+      },
+      "23": {
+        "seat_number": 23,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "24": {
+        "seat_number": 24,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "25": {
+        "seat_number": 25,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "26": {
+        "seat_number": 26,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Arnav",
+          "phone": "1234",
+          "email": "sdf"
+        },
+        "booking_id": "BKG-20260604234120"
+      },
+      "27": {
+        "seat_number": 27,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "28": {
+        "seat_number": 28,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "29": {
+        "seat_number": 29,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "30": {
+        "seat_number": 30,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "31": {
+        "seat_number": 31,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "32": {
+        "seat_number": 32,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 40",
+          "phone": "9000000040",
+          "email": "customer40@mail.com"
+        },
+        "booking_id": "PRE00039"
+      },
+      "33": {
+        "seat_number": 33,
+        "seat_type": "window",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 38",
+          "phone": "9000000038",
+          "email": "customer38@mail.com"
+        },
+        "booking_id": "PRE00037"
+      },
+      "34": {
+        "seat_number": 34,
+        "seat_type": "aisle",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "35": {
+        "seat_number": 35,
+        "seat_type": "window",
+        "is_reserved": false,
+        "passenger": null,
+        "booking_id": ""
+      },
+      "36": {
+        "seat_number": 36,
+        "seat_type": "aisle",
+        "is_reserved": true,
+        "passenger": {
+          "name": "Existing Customer 40",
+          "phone": "9000000040",
+          "email": "customer40@mail.com"
+        },
+        "booking_id": "PRE00039"
+      }
+    }
+  }
+}
