@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Express - Bus Reservation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand" id="brandLogo">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="16" rx="4"></rect>
+                        <path d="M3 10h18"></path>
+                        <circle cx="7" cy="15" r="1.5" fill="currentColor"></circle>
+                        <circle cx="17" cy="15" r="1.5" fill="currentColor"></circle>
+                        <path d="M5 19v2"></path>
+                        <path d="M19 19v2"></path>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Goa Express</span>
+                    <span class="brand-subtitle">Bus Reservation System</span>
+                </div>
+            </div>
+
+            <nav class="nav-tabs" id="mainNavTabs">
+                <button class="nav-tab active" data-tab="search-tab" id="navSearchTab">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Book Buses
+                </button>
+                <button class="nav-tab" data-tab="bookings-tab" id="navBookingsTab">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    My Bookings
+                </button>
+                <button class="nav-tab" data-tab="occupancy-tab" id="navOccupancyTab">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+                    Occupancy Reports
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
+
+        <!-- ============================================== -->
+        <!-- TAB 1: SEARCH & BOOK BUSES -->
+        <!-- ============================================== -->
+        <section id="search-tab" class="tab-pane active">
+            <!-- Search Hero Card -->
+            <div class="hero-search-card">
+                <div class="search-header">
+                    <h2>Book Your Bus Ticket</h2>
+                    <p>Intercity & Outstation routes connecting Goa across India</p>
+                </div>
+
+                <form id="busSearchForm" class="search-form-grid">
+                    <div class="input-group">
+                        <label for="fromSelect">From (Goa Origin)</label>
+                        <div class="select-wrapper">
+                            <svg class="field-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"></circle><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path></svg>
+                            <select id="fromSelect" name="source">
+                                <option value="">All Goa Towns</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="swap-btn-container">
+                        <button type="button" id="swapLocationsBtn" title="Swap From and To locations" class="btn-icon swap-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4M7 4L3 8M7 4L11 8M17 8v12M17 20l4-4M17 20l-4-4"/></svg>
+                        </button>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="toSelect">To (Destination)</label>
+                        <div class="select-wrapper">
+                            <svg class="field-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <select id="toSelect" name="destination">
+                                <option value="">All Destinations</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="dateSelect">Journey Date</label>
+                        <div class="select-wrapper">
+                            <svg class="field-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <input type="date" id="dateSelect" name="date">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="typeFilter">Bus Type</label>
+                        <div class="select-wrapper">
+                            <svg class="field-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="13" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            <select id="typeFilter" name="type">
+                                <option value="">All Types (Seater & Sleeper)</option>
+                                <option value="Seater">Seater</option>
+                                <option value="Sleeper">Sleeper</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-actions">
+                        <button type="submit" class="btn btn-primary search-submit-btn" id="searchBusesBtn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            Find Buses
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="resetSearchBtn">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Bus List Section -->
+            <div class="results-container">
+                <div class="results-header">
+                    <div>
+                        <h3 id="resultsTitle">Available Buses</h3>
+                        <p class="results-subtitle" id="resultsCount">Loading schedules...</p>
+                    </div>
+                    <div class="quick-filter-badges">
+                        <span class="badge badge-info" id="activeFilterBadge">Showing All Visible Buses</span>
+                    </div>
+                </div>
+
+                <!-- Bus Cards Grid -->
+                <div id="busList" class="bus-grid">
+                    <!-- Dynamic Bus Cards Injected via JS -->
+                </div>
+
+                <div id="noBusesPlaceholder" class="empty-state hidden">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <h4>No buses found matching your criteria</h4>
+                    <p>Try changing your source, destination, or date filters.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- TAB 2: MY BOOKINGS & MANAGE -->
+        <!-- ============================================== -->
+        <section id="bookings-tab" class="tab-pane">
+            <div class="manage-booking-card">
+                <div class="section-title-wrap">
+                    <h2>Manage & View Reservations</h2>
+                    <p>Search your bookings by Booking ID, Phone number, or Passenger Name to view details or cancel seats.</p>
+                </div>
+
+                <div class="search-tabs-sub">
+                    <div class="booking-search-bar">
+                        <div class="search-input-wrap">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <input type="text" id="bookingSearchInput" placeholder="Enter Booking ID (e.g. BKG-2026...), Phone Number, or Name...">
+                        </div>
+                        <button class="btn btn-primary" id="searchBookingBtn">Search</button>
+                        <button class="btn btn-secondary" id="loadAllBookingsBtn">View All</button>
+                    </div>
+                </div>
+
+                <div id="bookingsResultsList" class="bookings-grid">
+                    <!-- Dynamic Bookings Injected via JS -->
+                </div>
+
+                <div id="noBookingsPlaceholder" class="empty-state hidden">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <h4>No reservations found</h4>
+                    <p>Search with your registered phone number, booking ID, or passenger name.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- TAB 3: OCCUPANCY REPORT -->
+        <!-- ============================================== -->
+        <section id="occupancy-tab" class="tab-pane">
+            <div class="occupancy-card">
+                <div class="section-title-wrap">
+                    <h2>Bus Occupancy & Analytics</h2>
+                    <p>Track seat occupancy, reserved seat counts, and availability across scheduled buses.</p>
+                </div>
+
+                <div class="occupancy-search-bar">
+                    <div class="search-input-wrap">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="occupancyBusSearch" placeholder="Filter by Bus ID or Name (e.g. B0001, Kadamba)...">
+                    </div>
+                    <button class="btn btn-secondary" id="refreshOccupancyBtn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                        Refresh
+                    </button>
+                </div>
+
+                <div class="occupancy-table-container">
+                    <table class="occupancy-table">
+                        <thead>
+                            <tr>
+                                <th>Bus ID</th>
+                                <th>Bus Name & Type</th>
+                                <th>Route</th>
+                                <th>Departure</th>
+                                <th>Total Seats</th>
+                                <th>Reserved</th>
+                                <th>Available</th>
+                                <th>Occupancy</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="occupancyTableBody">
+                            <!-- Dynamic Table Rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================== -->
+    <!-- MODAL 1: SEAT SELECTION MODAL -->
+    <!-- ============================================== -->
+    <div id="seatModal" class="modal-backdrop hidden">
+        <div class="modal-card seat-modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3 id="seatModalBusName">Bus Seat Selection</h3>
+                    <div class="modal-subheading" id="seatModalBusRoute">Route Information</div>
+                </div>
+                <button class="btn-close" id="closeSeatModalBtn" aria-label="Close">&times;</button>
+            </div>
+
+            <div class="modal-body seat-modal-body">
+                <!-- Bus Info Summary Bar -->
+                <div class="bus-quick-info-bar">
+                    <div class="info-pill">
+                        <span class="label">Bus ID:</span>
+                        <strong id="seatModalBusId">B0000</strong>
+                    </div>
+                    <div class="info-pill">
+                        <span class="label">Type:</span>
+                        <strong id="seatModalBusType">Seater</strong>
+                    </div>
+                    <div class="info-pill">
+                        <span class="label">Fare / Seat:</span>
+                        <strong id="seatModalFare" class="highlight-text">₹0</strong>
+                    </div>
+                    <div class="info-pill">
+                        <span class="label">Departure:</span>
+                        <strong id="seatModalDeparture">--</strong>
+                    </div>
+                </div>
+
+                <!-- Seat Layout Legend -->
+                <div class="seat-legend">
+                    <div class="legend-item">
+                        <div class="seat-sample seat-available"></div>
+                        <span>Available</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="seat-sample seat-selected"></div>
+                        <span>Selected</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="seat-sample seat-reserved"></div>
+                        <span>Reserved</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Bus Coach Layout -->
+                <div class="coach-container">
+                    <div class="coach-front">
+                        <span class="coach-label">FRONT</span>
+                        <div class="driver-cabin" title="Driver's Cabin">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="12" y1="3" x2="12" y2="9"></line>
+                                <line x1="4.2" y1="16.5" x2="9.4" y2="13.5"></line>
+                                <line x1="19.8" y1="16.5" x2="14.6" y2="13.5"></line>
+                            </svg>
+                            <small>Driver</small>
+                        </div>
+                    </div>
+
+                    <div class="coach-body" id="coachSeatGrid">
+                        <!-- Seats dynamically generated here (4 columns: Col1, Col2, [Aisle], Col3, Col4) -->
+                    </div>
+
+                    <div class="coach-back">
+                        <span class="coach-label">REAR</span>
+                    </div>
+                </div>
+
+                <!-- Selection Summary & Checkout Button -->
+                <div class="selection-summary-bar">
+                    <div class="summary-details">
+                        <div class="selected-seats-row">
+                            <span class="text-muted">Selected Seats:</span>
+                            <span id="selectedSeatsList" class="selected-seats-badges">None</span>
+                        </div>
+                        <div class="total-fare-row">
+                            <span class="text-muted">Total Fare:</span>
+                            <span class="total-fare-amount" id="totalFareAmount">₹0.00</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg" id="proceedToCheckoutBtn" disabled>
+                        Proceed to Book
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL 2: PASSENGER CHECKOUT MODAL -->
+    <!-- ============================================== -->
+    <div id="checkoutModal" class="modal-backdrop hidden">
+        <div class="modal-card checkout-modal-card">
+            <div class="modal-header">
+                <h3>Passenger Details & Confirmation</h3>
+                <button class="btn-close" id="closeCheckoutModalBtn" aria-label="Close">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="checkout-trip-summary">
+                    <div class="summary-item">
+                        <span class="label">Bus:</span>
+                        <strong id="checkoutBusName">Kadamba Express</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Route:</span>
+                        <strong id="checkoutBusRoute">Panaji ➔ Pune</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Seats:</span>
+                        <strong id="checkoutSeats">1, 2</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Total Amount:</span>
+                        <strong id="checkoutTotalFare" class="highlight-text">₹1700.00</strong>
+                    </div>
+                </div>
+
+                <form id="passengerForm" class="passenger-form">
+                    <div class="form-group">
+                        <label for="passengerName">Full Name *</label>
+                        <input type="text" id="passengerName" name="name" required placeholder="Enter primary passenger name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengerPhone">Phone Number *</label>
+                        <input type="tel" id="passengerPhone" name="phone" required placeholder="10-digit mobile number (e.g. 9876543210)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengerEmail">Email Address *</label>
+                        <input type="email" id="passengerEmail" name="email" required placeholder="name@example.com">
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="backToSeatsBtn">Back</button>
+                        <button type="submit" class="btn btn-primary" id="confirmBookingBtn">
+                            <span id="confirmBookingBtnText">Confirm & Reserve Seats</span>
+                            <span id="confirmBookingSpinner" class="spinner hidden"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL 3: BOOKING RECEIPT / TICKET MODAL -->
+    <!-- ============================================== -->
+    <div id="ticketModal" class="modal-backdrop hidden">
+        <div class="modal-card ticket-modal-card">
+            <div class="modal-header">
+                <h3>Reservation Confirmed! 🎉</h3>
+                <button class="btn-close" id="closeTicketModalBtn" aria-label="Close">&times;</button>
+            </div>
+
+            <div class="modal-body" id="ticketContentArea">
+                <!-- Dynamic Boarding Pass / Ticket Rendered via JS -->
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="window.print()">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Print Ticket
+                </button>
+                <button class="btn btn-primary" id="doneTicketBtn">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL 4: CANCEL SEATS MODAL -->
+    <!-- ============================================== -->
+    <div id="cancelModal" class="modal-backdrop hidden">
+        <div class="modal-card cancel-modal-card">
+            <div class="modal-header">
+                <h3>Cancel Seats</h3>
+                <button class="btn-close" id="closeCancelModalBtn" aria-label="Close">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <p>Select the seat(s) you wish to cancel for Booking <strong id="cancelBookingId"></strong>:</p>
+
+                <div id="cancelSeatsCheckboxList" class="cancel-seats-list">
+                    <!-- Checkboxes injected dynamically -->
+                </div>
+
+                <div class="warning-box">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <span>Cancelling all seats will remove the reservation completely.</span>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="abortCancelBtn">Keep Booking</button>
+                    <button type="button" class="btn btn-danger" id="executeCancelBtn">Confirm Cancellation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2026 Goa Express Bus Reservation System. Made with Python & Modern Web UI.</p>
+        </div>
+    </footer>
+
+    <!-- App JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
