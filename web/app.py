@@ -25,8 +25,12 @@ from utils.exceptions import (
     InvalidSeatError
 )
 
-# Ensure FileManager points to the root data directory
-FileManager.DATA_FOLDER = os.path.join(ROOT_DIR, "data")
+# Keep local development data in the repository by default, but allow hosted
+# deployments to use isolated storage.
+FileManager.DATA_FOLDER = os.environ.get(
+    "DATA_DIR",
+    os.path.join(ROOT_DIR, "data")
+)
 
 app = Flask(
     __name__,

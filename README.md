@@ -84,6 +84,29 @@ python main.py
 
 ---
 
+## 🌐 Deploy a Public Demo
+
+This is a Flask application, so GitHub Pages cannot host its API or interactive
+features. The included `render.yaml` configures a demo deployment on Render,
+using this GitHub repository as its source:
+
+1. Push the project to GitHub.
+2. In Render, choose **New → Blueprint** and connect the repository.
+3. Review and apply the `bus-reservation-system` service.
+4. When deployment finishes, open the public `onrender.com` URL and share it.
+
+The hosted demo stores generated schedules, demo accounts, and test bookings
+under `/tmp`. That storage is temporary and may reset when the service restarts;
+it is not suitable for real reservations or payment information. Payments are
+simulated.
+
+**Before connecting this repository to a public hosting service, remove or
+anonymize any personal information in tracked files and Git history.** The
+committed JSON data files may contain account and reservation details. Do not
+use real customer data, credentials, or payment information in this demo.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Backend**: Python 3, Flask, Flask-CORS
