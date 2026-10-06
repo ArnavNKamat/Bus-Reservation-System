@@ -210,7 +210,7 @@ function init3DayDateSelector() {
     // Constrain date input
     elements.dateSelect.min = todayStr;
     elements.dateSelect.max = day3Str;
-    elements.dateSelect.value = todayStr;
+    elements.dateSelect.value = window.DEMO_MODE ? tomorrowStr : todayStr;
 
     // Quick Date Pills
     elements.pillToday.textContent = `Today (${formatPillDate(now)})`;
@@ -220,6 +220,7 @@ function init3DayDateSelector() {
     elements.pillToday.addEventListener('click', () => selectQuickDate(todayStr, elements.pillToday));
     elements.pillTomorrow.addEventListener('click', () => selectQuickDate(tomorrowStr, elements.pillTomorrow));
     elements.pillDay3.addEventListener('click', () => selectQuickDate(day3Str, elements.pillDay3));
+    updateActivePill(elements.dateSelect.value, todayStr, tomorrowStr, day3Str);
 
     elements.dateSelect.addEventListener('change', () => {
         updateActivePill(elements.dateSelect.value, todayStr, tomorrowStr, day3Str);
