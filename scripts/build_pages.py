@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import shutil
 
 
@@ -10,16 +11,18 @@ OUTPUT = ROOT / "site"
 
 def main():
     html = TEMPLATE.read_text(encoding="utf-8")
+    asset_version = os.environ.get("GITHUB_SHA", "local")
     css_template_ref = "{{ url_for('static', filename='css/style.css') }}"
     js_template_ref = "{{ url_for('static', filename='js/app.js') }}"
 
     if html.count(css_template_ref) != 1 or html.count(js_template_ref) != 1:
         raise RuntimeError("Expected exactly one Flask CSS and JavaScript asset reference.")
 
-    html = html.replace(css_template_ref, "static/css/style.css")
+    html = html.replace(css_template_ref, f"static/css/style.css?v={asset_version}")
     html = html.replace(
         js_template_ref,
-        'static/js/demo-api.js"></script>\n    <script src="static/js/app.js',
+        f'static/js/demo-api.js?v={asset_version}"></script>\n'
+        f'    <script src="static/js/app.js?v={asset_version}',
     )
     html = html.replace("🌴 Official Goa Travel Portal", "🌴 Interactive Portfolio Demo")
     html = html.replace("Instant E-Tickets", "Sample E-Tickets")
