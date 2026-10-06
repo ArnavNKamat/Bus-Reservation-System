@@ -279,10 +279,12 @@
             const latestDate = new Date(today);
             latestDate.setDate(today.getDate() + 2);
             const dateBounds = value => `${value.getFullYear()}-${String(value.getMonth() + 1).padStart(2, '0')}-${String(value.getDate()).padStart(2, '0')}`;
+            const parsedDate = new Date(`${input.date}T00:00:00`);
             const validDate = /^\d{4}-\d{2}-\d{2}$/.test(input.date || '') &&
                 input.date >= dateBounds(today) &&
                 input.date <= dateBounds(latestDate) &&
-                !Number.isNaN(new Date(`${input.date}T00:00:00`).getTime());
+                !Number.isNaN(parsedDate.getTime()) &&
+                dateBounds(parsedDate) === input.date;
             const validTime = /^\d{2}:\d{2}$/.test(input.time || '') &&
                 Number(input.time.slice(0, 2)) < 24 &&
                 Number(input.time.slice(3, 5)) < 60;
