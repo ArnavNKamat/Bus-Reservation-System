@@ -8,6 +8,10 @@ An end-to-end Bus Reservation System built in Python with both a Terminal (CLI) 
 
 This is a browser-only portfolio demo. Sign-in, bookings, and payments are
 simulated; please do not enter real personal or payment information.
+To try fleet management, choose **Administrator** at sign-in and use
+`admin@goabus.demo` / `GoaBusDemo!`. This public demo credential is not secure:
+bus schedules, bookings, and the simulated sign-in are stored only in your
+browser and are not shared with other visitors.
 
 ---
 
@@ -114,9 +118,13 @@ the Pages build uses a browser-only mock API instead:
 
 The demo includes sample bus schedules, seat selection, simulated sign-in,
 browser-local test bookings and cancellations, and occupancy reports. It does
-not contact the Flask API, process payments, or save data to a server. Demo
-bookings remain in that browser's local storage and can be cleared by resetting
-the browser's site data.
+not contact the Flask API, process payments, or save data to a server. Admins
+can add and remove upcoming demo departures and view sample occupancy
+statistics. Added schedules become searchable and bookable in that browser;
+they are not published to other visitors. Demo users can register or sign in
+with sample details; the administrator demo uses the public credentials above.
+Demo schedules, bookings, and sign-in state remain in that browser's local
+storage and can be cleared by resetting the browser's site data.
 
 **Do not enter real personal, account, or payment information.** GitHub Pages
 publishes only the generated `site/` directory; it does not publish the

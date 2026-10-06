@@ -26,6 +26,7 @@ const elements = {
     logoutBtn: document.getElementById('logoutBtn'),
     authModal: document.getElementById('authModal'),
     closeAuthModalBtn: document.getElementById('closeAuthModalBtn'),
+    signInRole: document.getElementById('signInRole'),
     toggleSignInBtn: document.getElementById('toggleSignInBtn'),
     toggleSignUpBtn: document.getElementById('toggleSignUpBtn'),
     signInForm: document.getElementById('signInForm'),
@@ -108,6 +109,16 @@ const elements = {
     occupancyBusSearch: document.getElementById('occupancyBusSearch'),
     refreshOccupancyBtn: document.getElementById('refreshOccupancyBtn'),
     occupancyTableBody: document.getElementById('occupancyTableBody'),
+    adminTotalBuses: document.getElementById('adminTotalBuses'),
+    adminTotalCapacity: document.getElementById('adminTotalCapacity'),
+    adminBookedSeats: document.getElementById('adminBookedSeats'),
+    adminOccupancyRate: document.getElementById('adminOccupancyRate'),
+    addBusForm: document.getElementById('addBusForm'),
+    addBusSubmitBtn: document.getElementById('addBusSubmitBtn'),
+    adminBusDate: document.getElementById('adminBusDate'),
+    adminBusSeats: document.getElementById('adminBusSeats'),
+    adminBusTableBody: document.getElementById('adminBusTableBody'),
+    noAdminBusesPlaceholder: document.getElementById('noAdminBusesPlaceholder'),
 
     // Toast
     toastContainer: document.getElementById('toastContainer')
@@ -164,10 +175,20 @@ async function apiCall(endpoint, options = {}) {
 document.addEventListener('DOMContentLoaded', async () => {
     initNavigation();
     init3DayDateSelector();
+    initAdminDateSelector();
+    if (!window.DEMO_MODE) {
+        elements.signInRole.closest('.form-group').classList.add('hidden');
+        document.querySelector('.auth-demo-note').classList.add('hidden');
+        document.querySelectorAll('[data-demo-admin]').forEach(section => section.classList.add('hidden'));
+        document.querySelector('.admin-only-badge').classList.add('hidden');
+        document.getElementById('adminDashboardTitle').textContent = 'Bus Occupancy & Timetable Analytics';
+        document.getElementById('adminDashboardDescription').textContent = 'Track seat occupancy, reserved seats, and real-time fill rates across all scheduled buses.';
+        document.getElementById('navOccupancyTab').innerHTML = document.getElementById('navOccupancyTab').innerHTML.replace('Admin Dashboard', 'Occupancy Reports');
+    }
     await checkAuthSession();
     await loadLocations();
     await fetchBuses();
-    loadOccupancyReports();
+    if (!window.DEMO_MODE) loadOccupancyReports();
     setupEventListeners();
 });
 
@@ -175,6 +196,12 @@ function initNavigation() {
     elements.navTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const targetId = tab.getAttribute('data-tab');
+
+            if (targetId === 'occupancy-tab' && window.DEMO_MODE && state.currentUser?.role !== 'admin') {
+                openAuthModal('Sign in as an administrator to manage buses and view analytics');
+                elements.signInRole.value = 'admin';
+                return;
+            }
 
             elements.navTabs.forEach(t => t.classList.remove('active'));
             elements.tabPanes.forEach(pane => pane.classList.remove('active'));
@@ -186,7 +213,7 @@ function initNavigation() {
             if (targetId === 'bookings-tab') {
                 loadAllBookings();
             } else if (targetId === 'occupancy-tab') {
-                loadOccupancyReports();
+                loadAdminDashboard();
             }
         });
     });
@@ -254,6 +281,17 @@ function formatPillDate(d) {
     return `${d.getDate()} ${months[d.getMonth()]}`;
 }
 
+function initAdminDateSelector() {
+    const today = new Date();
+    const maxDate = new Date(today);
+    maxDate.setDate(today.getDate() + 2);
+    elements.adminBusDate.min = formatDateISO(today);
+    elements.adminBusDate.max = formatDateISO(maxDate);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    elements.adminBusDate.value = formatDateISO(tomorrow);
+}
+
 // -------------------------------------------------------------
 // Authentication (Sign In, Sign Up, Session)
 // -------------------------------------------------------------
@@ -278,20 +316,23 @@ async function checkAuthSession() {
 }
 
 function setLoggedInUser(user) {
-    state.currentUser = user;
-    localStorage.setItem('goa_express_user', JSON.stringify(user));
+    state.currentUser = { ...user, role: user.role || 'user' };
+    localStorage.setItem('goa_express_user', JSON.stringify(state.currentUser));
 
     elements.openAuthModalBtn.classList.add('hidden');
     elements.userProfileMenu.classList.remove('hidden');
 
-    elements.navUserName.textContent = user.name;
-    const initials = user.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+    elements.navUserName.textContent = state.currentUser.name;
+    const initials = state.currentUser.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
     elements.userAvatar.textContent = initials || 'GK';
+    const canManageDemo = window.DEMO_MODE && state.currentUser.role === 'admin';
+    document.getElementById('navOccupancyTab').classList.toggle('hidden', window.DEMO_MODE && !canManageDemo);
 
     // Auto-fill checkout fields if opened
-    if (elements.passengerName) elements.passengerName.value = user.name || '';
-    if (elements.passengerPhone) elements.passengerPhone.value = user.phone || '';
-    if (elements.passengerEmail) elements.passengerEmail.value = user.email || '';
+    if (elements.passengerName) elements.passengerName.value = state.currentUser.name || '';
+    if (elements.passengerPhone) elements.passengerPhone.value = state.currentUser.phone || '';
+    if (elements.passengerEmail) elements.passengerEmail.value = state.currentUser.email || '';
+    if (canManageDemo) loadAdminDashboard();
 }
 
 function setLoggedOut() {
@@ -299,16 +340,21 @@ function setLoggedOut() {
     localStorage.removeItem('goa_express_user');
     elements.openAuthModalBtn.classList.remove('hidden');
     elements.userProfileMenu.classList.add('hidden');
+    document.getElementById('navOccupancyTab').classList.toggle('hidden', Boolean(window.DEMO_MODE));
+    if (window.DEMO_MODE && document.getElementById('occupancy-tab').classList.contains('active')) {
+        document.getElementById('navSearchTab').click();
+    }
 }
 
 async function handleSignIn(e) {
     e.preventDefault();
     const email_or_phone = document.getElementById('signInEmail').value.trim();
     const password = document.getElementById('signInPassword').value;
+    const role = window.DEMO_MODE ? elements.signInRole.value : 'user';
 
     const data = await apiCall('/api/auth/signin', {
         method: 'POST',
-        body: JSON.stringify({ email_or_phone, password })
+        body: JSON.stringify({ email_or_phone, password, role })
     });
 
     if (data.success) {
@@ -316,6 +362,9 @@ async function handleSignIn(e) {
         elements.authModal.classList.add('hidden');
         elements.signInForm.reset();
         showToast(`Welcome back, ${data.user.name}!`, 'success');
+        if (window.DEMO_MODE && data.user.role === 'admin') {
+            document.getElementById('navOccupancyTab').click();
+        }
 
         if (state.pendingCheckoutAfterAuth) {
             state.pendingCheckoutAfterAuth = false;
@@ -390,6 +439,17 @@ async function loadLocations() {
         filterLocationOptions(elements.fromSelect, elements.fromSearch.value);
         filterLocationOptions(elements.toSelect, elements.toSearch.value);
     }
+
+}
+
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, character => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    })[character]);
 }
 
 function filterLocationOptions(select, query) {
@@ -462,25 +522,25 @@ function renderBusList(buses) {
         card.innerHTML = `
             <div class="bus-info-main">
                 <div class="bus-title-row">
-                    <span class="bus-name">${bus.name}</span>
-                    <span class="bus-id-tag">${bus.bus_id}</span>
-                    <span class="badge ${typeBadgeClass}">${bus.bus_type}</span>
+                    <span class="bus-name">${escapeHTML(bus.name)}</span>
+                    <span class="bus-id-tag">${escapeHTML(bus.bus_id)}</span>
+                    <span class="badge ${typeBadgeClass}">${escapeHTML(bus.bus_type)}</span>
                 </div>
                 <div class="bus-route">
-                    <span>${bus.source}</span>
+                    <span>${escapeHTML(bus.source)}</span>
                     <span class="route-arrow">➔</span>
-                    <span>${bus.destination}</span>
+                    <span>${escapeHTML(bus.destination)}</span>
                 </div>
             </div>
 
             <div class="bus-timing">
                 <div class="time-row">
                     <span class="time-label">Departs:</span>
-                    <span class="time-val" style="color:var(--primary);">${bus.departure_display}</span>
+                    <span class="time-val" style="color:var(--primary);">${escapeHTML(bus.departure_display)}</span>
                 </div>
                 <div class="time-row">
                     <span class="time-label">Arrives:</span>
-                    <span class="time-val">${bus.arrival_display}</span>
+                    <span class="time-val">${escapeHTML(bus.arrival_display)}</span>
                 </div>
             </div>
 
@@ -490,7 +550,7 @@ function renderBusList(buses) {
             </div>
 
             <div class="bus-action">
-                <button class="btn btn-primary select-seat-btn" data-bus-id="${bus.bus_id}" ${isSoldOut ? 'disabled' : ''}>
+                <button class="btn btn-primary select-seat-btn" data-bus-id="${escapeHTML(bus.bus_id)}" ${isSoldOut ? 'disabled' : ''}>
                     ${isSoldOut ? 'Sold Out' : 'Select Seats'}
                 </button>
             </div>
@@ -1008,10 +1068,125 @@ async function executeCancellation() {
 // Occupancy Reports
 // -------------------------------------------------------------
 async function loadOccupancyReports() {
+    if (window.DEMO_MODE && state.currentUser?.role !== 'admin') return;
     const data = await apiCall('/api/reports/all-occupancy');
     if (data.success) {
         renderOccupancyTable(data.reports);
     }
+}
+
+async function loadAdminDashboard() {
+    if (!window.DEMO_MODE || state.currentUser?.role !== 'admin') return;
+
+    const [occupancyData, busData] = await Promise.all([
+        apiCall('/api/reports/all-occupancy'),
+        apiCall('/api/admin/buses')
+    ]);
+    if (!occupancyData.success || !busData.success) {
+        showToast(occupancyData.error || busData.error || 'Unable to load admin dashboard', 'error');
+        return;
+    }
+
+    const reports = occupancyData.reports;
+    const capacity = reports.reduce((total, report) => total + report.total_seats, 0);
+    const reserved = reports.reduce((total, report) => total + report.reserved_seats_count, 0);
+    elements.adminTotalBuses.textContent = String(reports.length);
+    elements.adminTotalCapacity.textContent = String(capacity);
+    elements.adminBookedSeats.textContent = String(reserved);
+    elements.adminOccupancyRate.textContent = `${capacity ? Math.round(reserved / capacity * 100) : 0}%`;
+    renderAdminBusTable(busData.buses);
+    renderOccupancyTable(reports);
+}
+
+async function handleAddBusSubmit(event) {
+    event.preventDefault();
+    if (!window.DEMO_MODE || state.currentUser?.role !== 'admin') {
+        showToast('Administrator sign-in is required to add buses', 'error');
+        return;
+    }
+
+    const formData = new FormData(elements.addBusForm);
+    const bus = Object.fromEntries(formData.entries());
+    elements.addBusSubmitBtn.disabled = true;
+    elements.addBusSubmitBtn.textContent = 'Adding bus...';
+
+    const data = await apiCall('/api/buses', {
+        method: 'POST',
+        body: JSON.stringify(bus)
+    });
+    elements.addBusSubmitBtn.disabled = false;
+    elements.addBusSubmitBtn.textContent = 'Add bus to schedules';
+
+    if (!data.success) {
+        showToast(data.error || 'Unable to add bus', 'error');
+        return;
+    }
+
+    const source = bus.source.trim();
+    const destination = bus.destination.trim();
+    const date = bus.date;
+    elements.addBusForm.reset();
+    elements.adminBusSeats.value = '40';
+    initAdminDateSelector();
+    showToast('Bus added to the demo timetable and made available for booking', 'success');
+    await loadLocations();
+    elements.fromSelect.value = source;
+    elements.toSelect.value = destination;
+    elements.dateSelect.value = date;
+    await fetchBuses();
+    await loadAdminDashboard();
+}
+
+async function removeAdminBus(busId) {
+    if (!window.DEMO_MODE || state.currentUser?.role !== 'admin') {
+        showToast('Administrator sign-in is required to remove buses', 'error');
+        return;
+    }
+    if (!window.confirm(`Remove bus ${busId} from the demo schedule?`)) return;
+
+    const data = await apiCall(`/api/buses/${encodeURIComponent(busId)}`, { method: 'DELETE' });
+    if (!data.success) {
+        showToast(data.error || 'Unable to remove bus', 'error');
+        return;
+    }
+    showToast('Bus removed from the demo timetable', 'success');
+    await loadLocations();
+    await fetchBuses();
+    await loadAdminDashboard();
+}
+
+function renderAdminBusTable(buses) {
+    elements.adminBusTableBody.replaceChildren();
+    elements.noAdminBusesPlaceholder.classList.toggle('hidden', buses.length > 0);
+
+    buses.forEach(bus => {
+        const row = document.createElement('tr');
+        const busCell = document.createElement('td');
+        const busName = document.createElement('strong');
+        busName.textContent = bus.name;
+        const busId = document.createElement('div');
+        busId.className = 'bus-id-tag';
+        busId.textContent = bus.bus_id;
+        busCell.append(busName, busId);
+
+        const routeCell = document.createElement('td');
+        routeCell.textContent = `${bus.source} → ${bus.destination}`;
+        const departureCell = document.createElement('td');
+        departureCell.textContent = bus.departure_display;
+        const seatsCell = document.createElement('td');
+        seatsCell.textContent = `${bus.available_seats_count} / ${bus.total_seats}`;
+        const fareCell = document.createElement('td');
+        fareCell.textContent = `₹${Math.round(bus.fare)}`;
+        const actionCell = document.createElement('td');
+        const removeButton = document.createElement('button');
+        removeButton.type = 'button';
+        removeButton.className = 'btn btn-danger btn-sm remove-demo-bus-btn';
+        removeButton.dataset.busId = bus.bus_id;
+        removeButton.textContent = 'Remove';
+        actionCell.appendChild(removeButton);
+        row.append(busCell, routeCell, departureCell, seatsCell, fareCell, actionCell);
+        elements.adminBusTableBody.appendChild(row);
+    });
 }
 
 function renderOccupancyTable(reports) {
@@ -1027,10 +1202,10 @@ function renderOccupancyTable(reports) {
         const tr = document.createElement('tr');
 
         tr.innerHTML = `
-            <td><strong style="font-family:monospace; color:var(--primary);">${rep.bus_id}</strong></td>
-            <td><strong>${rep.name}</strong> <span class="badge ${rep.bus_type.toLowerCase() === 'sleeper' ? 'badge-sleeper' : 'badge-seater'}" style="margin-left:4px;">${rep.bus_type}</span></td>
-            <td>${rep.route}</td>
-            <td><strong style="color:var(--primary);">${rep.departure_display}</strong></td>
+            <td><strong style="font-family:monospace; color:var(--primary);">${escapeHTML(rep.bus_id)}</strong></td>
+            <td><strong>${escapeHTML(rep.name)}</strong> <span class="badge ${rep.bus_type.toLowerCase() === 'sleeper' ? 'badge-sleeper' : 'badge-seater'}" style="margin-left:4px;">${escapeHTML(rep.bus_type)}</span></td>
+            <td>${escapeHTML(rep.route)}</td>
+            <td><strong style="color:var(--primary);">${escapeHTML(rep.departure_display)}</strong></td>
             <td>${rep.total_seats}</td>
             <td><span style="color:var(--danger); font-weight:700;">${rep.reserved_seats_count}</span></td>
             <td><span style="color:var(--success); font-weight:700;">${rep.available_seats_count}</span></td>
@@ -1094,6 +1269,11 @@ function setupEventListeners() {
     elements.signInForm.addEventListener('submit', handleSignIn);
     elements.signUpForm.addEventListener('submit', handleSignUp);
     elements.logoutBtn.addEventListener('click', handleLogout);
+    elements.addBusForm.addEventListener('submit', handleAddBusSubmit);
+    elements.adminBusTableBody.addEventListener('click', event => {
+        const removeButton = event.target.closest('.remove-demo-bus-btn');
+        if (removeButton) removeAdminBus(removeButton.dataset.busId);
+    });
 
     // Search form
     elements.searchForm.addEventListener('submit', (e) => {
@@ -1172,7 +1352,10 @@ function setupEventListeners() {
             if (data.success) renderOccupancyTable(data.reports);
         });
     });
-    elements.refreshOccupancyBtn.addEventListener('click', loadOccupancyReports);
+    elements.refreshOccupancyBtn.addEventListener('click', () => {
+        if (window.DEMO_MODE) loadAdminDashboard();
+        else loadOccupancyReports();
+    });
 
     // Close Modals on Backdrop Click
     window.addEventListener('click', (e) => {

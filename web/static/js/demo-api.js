@@ -1,6 +1,10 @@
 /* Browser-only API for the GitHub Pages portfolio demo. */
 (() => {
     const storageKey = 'goa_express_demo_reservations';
+    const customBusesStorageKey = 'goabus_demo_custom_buses';
+    const removedBusesStorageKey = 'goabus_demo_removed_buses';
+    const adminEmail = 'admin@goabus.demo';
+    const adminPassword = 'GoaBusDemo!';
     const towns = [
         'Panaji', 'Mapusa', 'Porvorim', 'Ponda', 'Bicholim', 'Pernem',
         'Calangute', 'Candolim', 'Baga', 'Anjuna', 'Vagator', 'Arambol',
@@ -30,6 +34,25 @@
         localStorage.setItem(storageKey, JSON.stringify(reservations));
     }
 
+    function readCustomBuses() {
+        const stored = localStorage.getItem(customBusesStorageKey);
+        return stored ? JSON.parse(stored) : [];
+    }
+
+    function saveCustomBuses(buses) {
+        localStorage.setItem(customBusesStorageKey, JSON.stringify(buses));
+    }
+
+    function readRemovedBuses() {
+        const stored = localStorage.getItem(removedBusesStorageKey);
+        return stored ? JSON.parse(stored) : [];
+    }
+
+    function isAdmin() {
+        const user = JSON.parse(localStorage.getItem('goa_express_user') || 'null');
+        return user?.role === 'admin';
+    }
+
     function formatTime(time) {
         const [hours, minutes] = time.split(':').map(Number);
         const suffix = hours >= 12 ? 'PM' : 'AM';
@@ -40,16 +63,16 @@
         return `${date} ${time}`;
     }
 
-    function makeBus(route, routeIndex, date, time, departureIndex) {
+    function makeBus(route, routeIndex, date, time, departureIndex, custom = false) {
         const departure = new Date(`${date}T${time}:00`);
         const durationMinutes = route.type === 'Sleeper' ? 600 : 60 + (routeIndex % 3) * 15;
         const arrival = new Date(departure.getTime() + durationMinutes * 60000);
         const pad = value => String(value).padStart(2, '0');
         const arrivalTime = `${pad(arrival.getHours())}:${pad(arrival.getMinutes())}`;
         const arrivalDate = `${arrival.getFullYear()}-${pad(arrival.getMonth() + 1)}-${pad(arrival.getDate())}`;
-        const available = route.seats - (routeIndex * 7 + departureIndex * 3) % 13;
+        const available = custom ? route.seats : route.seats - (routeIndex * 7 + departureIndex * 3) % 13;
         const bus = {
-            bus_id: `DEMO-${routeIndex + 1}-${date.replaceAll('-', '')}-${departureIndex + 1}`,
+            bus_id: route.bus_id || `DEMO-${routeIndex + 1}-${date.replaceAll('-', '')}-${departureIndex + 1}`,
             name: route.name,
             source: route.source,
             destination: route.destination,
@@ -91,7 +114,14 @@
                 });
             });
         }
-        const futureBuses = buses.filter(bus => new Date(bus.departure_dt.replace(' ', 'T')) > new Date());
+        readCustomBuses().forEach((route, routeIndex) => {
+            buses.push(makeBus(route, routes.length + routeIndex, route.date, route.time, routeIndex, true));
+        });
+        const removedBuses = new Set(readRemovedBuses());
+        const futureBuses = buses.filter(bus =>
+            new Date(bus.departure_dt.replace(' ', 'T')) > new Date() &&
+            !removedBuses.has(bus.bus_id)
+        );
         const bookings = readReservations();
         futureBuses.forEach(bus => {
             bookings
@@ -169,7 +199,16 @@
         const buses = allBuses();
 
         if (path === '/api/locations') {
-            return json({ success: true, sources: towns, destinations: [...towns, ...outstation], outstation });
+            const customBuses = readCustomBuses();
+            const unique = values => [...new Map(values.map(value => [value.toLocaleLowerCase(), value])).values()];
+            const customSources = customBuses.map(bus => bus.source);
+            const customDestinations = customBuses.map(bus => bus.destination);
+            return json({
+                success: true,
+                sources: unique([...towns, ...customSources]),
+                destinations: unique([...towns, ...outstation, ...customSources, ...customDestinations]),
+                outstation
+            });
         }
 
         if (path === '/api/auth/me') {
@@ -179,11 +218,22 @@
 
         if (path === '/api/auth/signin' && method === 'POST') {
             const input = bodyOf(options);
-            const identifier = input.email_or_phone.trim();
+            const identifier = (input.email_or_phone || '').trim();
+            if (!identifier || !input.password) {
+                return json({ success: false, error: 'Enter your sign-in details.' });
+            }
+            if (input.role === 'admin' &&
+                (identifier.toLowerCase() !== adminEmail || input.password !== adminPassword)) {
+                return json({ success: false, error: 'Administrator demo credentials are incorrect.' });
+            }
+            if (input.role !== 'admin' && identifier.toLowerCase() === adminEmail) {
+                return json({ success: false, error: 'Choose Administrator for the demo admin account.' });
+            }
             const user = {
-                name: identifier.includes('@') ? identifier.split('@')[0] : 'Demo Passenger',
+                name: input.role === 'admin' ? 'GoaBus Admin' : identifier.includes('@') ? identifier.split('@')[0] : 'Demo Passenger',
                 phone: /^\d+$/.test(identifier) ? identifier : '',
-                email: identifier.includes('@') ? identifier : ''
+                email: identifier.includes('@') ? identifier : '',
+                role: input.role === 'admin' ? 'admin' : 'user'
             };
             localStorage.setItem('goa_express_user', JSON.stringify(user));
             return json({ success: true, user, message: `Welcome, ${user.name}!` });
@@ -191,7 +241,7 @@
 
         if (path === '/api/auth/signup' && method === 'POST') {
             const input = bodyOf(options);
-            const user = { name: input.name, phone: input.phone, email: input.email.toLowerCase() };
+            const user = { name: input.name, phone: input.phone, email: input.email.toLowerCase(), role: 'user' };
             localStorage.setItem('goa_express_user', JSON.stringify(user));
             return json({ success: true, user, message: 'Demo account created.' });
         }
@@ -199,6 +249,11 @@
         if (path === '/api/auth/logout' && method === 'POST') {
             localStorage.removeItem('goa_express_user');
             return json({ success: true });
+        }
+
+        if (path === '/api/admin/buses' && method === 'GET') {
+            if (!isAdmin()) return json({ success: false, error: 'Administrator sign-in is required.' });
+            return json({ success: true, buses: buses.map(busSummary) });
         }
 
         if (path === '/api/buses' && method === 'GET') {
@@ -211,10 +266,80 @@
             return json({ success: true, count: filtered.length, buses: filtered.map(busSummary) });
         }
 
+        if (path === '/api/buses' && method === 'POST') {
+            if (!isAdmin()) return json({ success: false, error: 'Administrator sign-in is required to add buses.' });
+            const input = bodyOf(options);
+            const name = typeof input.name === 'string' ? input.name.trim() : '';
+            const source = typeof input.source === 'string' ? input.source.trim() : '';
+            const destination = typeof input.destination === 'string' ? input.destination.trim() : '';
+            const seats = Number(input.seats);
+            const fare = Number(input.fare);
+            const type = input.type;
+            const today = new Date();
+            const latestDate = new Date(today);
+            latestDate.setDate(today.getDate() + 2);
+            const dateBounds = value => `${value.getFullYear()}-${String(value.getMonth() + 1).padStart(2, '0')}-${String(value.getDate()).padStart(2, '0')}`;
+            const validDate = /^\d{4}-\d{2}-\d{2}$/.test(input.date || '') &&
+                input.date >= dateBounds(today) &&
+                input.date <= dateBounds(latestDate) &&
+                !Number.isNaN(new Date(`${input.date}T00:00:00`).getTime());
+            const validTime = /^\d{2}:\d{2}$/.test(input.time || '') &&
+                Number(input.time.slice(0, 2)) < 24 &&
+                Number(input.time.slice(3, 5)) < 60;
+            if (!name || name.length > 60 || !source || source.length > 50 ||
+                !destination || destination.length > 50 ||
+                source.toLocaleLowerCase() === destination.toLocaleLowerCase() ||
+                !validDate || !validTime ||
+                new Date(`${input.date}T${input.time}:00`) <= new Date() ||
+                !Number.isInteger(seats) || seats < 1 || seats > 60 ||
+                !Number.isFinite(fare) || fare <= 0 ||
+                !['Seater', 'Sleeper'].includes(type)) {
+                return json({ success: false, error: 'Check the bus details. Use a distinct route, a future departure within 3 days, 1–60 seats, and a positive fare.' });
+            }
+
+            const customBuses = readCustomBuses();
+            const bus = {
+                bus_id: `GB-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`,
+                name,
+                source,
+                destination,
+                date: input.date,
+                time: input.time,
+                fare,
+                type,
+                seats
+            };
+            customBuses.push(bus);
+            saveCustomBuses(customBuses);
+            return json({ success: true, bus });
+        }
+
         const busMatch = path.match(/^\/api\/buses\/([^/]+)$/);
         if (busMatch && method === 'GET') {
             const bus = buses.find(item => item.bus_id === decodeURIComponent(busMatch[1]));
             return json(bus ? { success: true, bus: busDetails(bus) } : { success: false, error: 'Bus not found.' });
+        }
+
+        if (busMatch && method === 'DELETE') {
+            if (!isAdmin()) return json({ success: false, error: 'Administrator sign-in is required to remove buses.' });
+            const busId = decodeURIComponent(busMatch[1]);
+            const customBuses = readCustomBuses();
+            const index = customBuses.findIndex(bus => bus.bus_id === busId);
+            if (index < 0 && !buses.some(bus => bus.bus_id === busId)) {
+                return json({ success: false, error: 'Upcoming bus not found.' });
+            }
+            if (readReservations().some(reservation => reservation.bus_id === busId)) {
+                return json({ success: false, error: 'This bus has a demo booking and cannot be removed.' });
+            }
+            if (index >= 0) {
+                customBuses.splice(index, 1);
+                saveCustomBuses(customBuses);
+            } else {
+                const removedBuses = readRemovedBuses();
+                removedBuses.push(busId);
+                localStorage.setItem(removedBusesStorageKey, JSON.stringify(removedBuses));
+            }
+            return json({ success: true });
         }
 
         if (path === '/api/bookings' && method === 'POST') {
@@ -309,12 +434,14 @@
         }
 
         if (path === '/api/reports/all-occupancy') {
+            if (!isAdmin()) return json({ success: false, error: 'Administrator sign-in is required to view bus analytics.' });
             const reports = buses.map(occupancyFor).sort((left, right) => right.occupancy_percentage - left.occupancy_percentage);
             return json({ success: true, count: reports.length, reports });
         }
 
         const reportMatch = path.match(/^\/api\/reports\/occupancy\/([^/]+)$/);
         if (reportMatch) {
+            if (!isAdmin()) return json({ success: false, error: 'Administrator sign-in is required to view bus analytics.' });
             const bus = buses.find(item => item.bus_id === decodeURIComponent(reportMatch[1]));
             if (!bus) return json({ success: false, error: 'Bus not found.' });
             const report = occupancyFor(bus);

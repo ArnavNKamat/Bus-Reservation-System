@@ -32,7 +32,7 @@
                 </button>
                 <button class="nav-tab" data-tab="occupancy-tab" id="navOccupancyTab">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
-                    Occupancy Reports
+                    Admin Dashboard
                 </button>
             </nav>
 
@@ -246,10 +246,110 @@
         <!-- TAB 3: OCCUPANCY REPORT -->
         <!-- ============================================== -->
         <section id="occupancy-tab" class="tab-pane">
-            <div class="occupancy-card">
+            <div class="admin-dashboard">
+            <div class="section-title-wrap">
+                <span class="badge badge-info admin-only-badge">Administrator access</span>
+                <h2 id="adminDashboardTitle">Fleet Management & Analytics</h2>
+                <p id="adminDashboardDescription">Add upcoming buses to the booking list, remove demo schedules, and monitor seat occupancy.</p>
+            </div>
+
+            <div class="admin-stats-grid" data-demo-admin aria-live="polite">
+                <article class="admin-stat-card">
+                    <span>Upcoming departures</span>
+                    <strong id="adminTotalBuses">0</strong>
+                </article>
+                <article class="admin-stat-card">
+                    <span>Total seat capacity</span>
+                    <strong id="adminTotalCapacity">0</strong>
+                </article>
+                <article class="admin-stat-card">
+                    <span>Seats reserved</span>
+                    <strong id="adminBookedSeats">0</strong>
+                </article>
+                <article class="admin-stat-card">
+                    <span>Overall occupancy</span>
+                    <strong id="adminOccupancyRate">0%</strong>
+                </article>
+            </div>
+
+            <section class="admin-section-card" id="adminBusManagement" data-demo-admin aria-labelledby="addBusHeading">
                 <div class="section-title-wrap">
-                    <h2>Bus Occupancy & Timetable Analytics</h2>
-                    <p>Track seat occupancy, reserved seats, and real-time fill rates across all scheduled buses.</p>
+                    <h3 id="addBusHeading">Add a scheduled bus</h3>
+                    <p>New buses are immediately searchable and available for demo seat booking on the selected date.</p>
+                </div>
+                <form id="addBusForm" class="admin-bus-form">
+                    <div class="form-group">
+                        <label for="adminBusName">Bus name</label>
+                        <input id="adminBusName" name="name" type="text" maxlength="60" required placeholder="e.g. Coastal Express">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusSource">From</label>
+                        <input id="adminBusSource" name="source" type="text" maxlength="50" required placeholder="e.g. Panaji">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusDestination">To</label>
+                        <input id="adminBusDestination" name="destination" type="text" maxlength="50" required placeholder="e.g. Margao">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusDate">Travel date (next 3 days)</label>
+                        <input id="adminBusDate" name="date" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusTime">Departure time</label>
+                        <input id="adminBusTime" name="time" type="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusType">Coach type</label>
+                        <select id="adminBusType" name="type">
+                            <option value="Seater">Seater</option>
+                            <option value="Sleeper">Sleeper</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusSeats">Seats (1–60)</label>
+                        <input id="adminBusSeats" name="seats" type="number" min="1" max="60" value="40" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminBusFare">Fare per seat (₹)</label>
+                        <input id="adminBusFare" name="fare" type="number" min="1" step="1" required placeholder="e.g. 250">
+                    </div>
+                    <div class="admin-form-actions">
+                        <button class="btn btn-primary" type="submit" id="addBusSubmitBtn">Add bus to schedules</button>
+                    </div>
+                </form>
+                <p class="admin-demo-note">GitHub Pages demo: schedules and changes are saved only in this browser. Admin access is simulated and is not secure.</p>
+            </section>
+
+            <section class="admin-section-card" id="adminAddedBuses" data-demo-admin aria-labelledby="manageBusesHeading">
+                <div class="section-title-wrap">
+                    <h3 id="manageBusesHeading">Upcoming scheduled buses</h3>
+                    <p>Remove any upcoming departure from search results. Buses with demo bookings cannot be removed.</p>
+                </div>
+                <div class="occupancy-table-container">
+                    <table class="occupancy-table admin-bus-table">
+                        <thead>
+                            <tr>
+                                <th>Bus</th>
+                                <th>Route</th>
+                                <th>Departure</th>
+                                <th>Seats</th>
+                                <th>Fare</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminBusTableBody"></tbody>
+                    </table>
+                </div>
+                <div id="noAdminBusesPlaceholder" class="empty-state hidden">
+                    <h4>No upcoming buses</h4>
+                    <p>Add a bus above to make it available in the demo timetable.</p>
+                </div>
+            </section>
+
+            <section class="admin-section-card" aria-labelledby="occupancyHeading">
+                <div class="section-title-wrap">
+                    <h3 id="occupancyHeading">Bus Occupancy & Timetable Analytics</h3>
+                    <p>Compare reserved seats and fill rates across all upcoming demo departures.</p>
                 </div>
 
                 <div class="occupancy-search-bar">
@@ -283,6 +383,7 @@
                         </tbody>
                     </table>
                 </div>
+                </section>
             </div>
         </section>
     </main>
@@ -304,13 +405,21 @@
                 <!-- SIGN IN FORM -->
                 <form id="signInForm" class="auth-form">
                     <div class="form-group">
+                        <label for="signInRole">Sign in as</label>
+                        <select id="signInRole" name="role">
+                            <option value="user">Passenger</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="signInEmail">Email or Phone Number</label>
-                        <input type="text" id="signInEmail" required placeholder="name@example.com or 10-digit mobile">
+                        <input type="text" id="signInEmail" required placeholder="name@example.com or phone number">
                     </div>
                     <div class="form-group">
                         <label for="signInPassword">Password</label>
                         <input type="password" id="signInPassword" required placeholder="Enter your password">
                     </div>
+                    <p class="admin-demo-note auth-demo-note">Demo administrator: <strong>admin@goabus.demo</strong> / <strong>GoaBusDemo!</strong></p>
                     <div class="auth-form-footer">
                         <button type="submit" class="btn btn-primary btn-block" id="signInSubmitBtn">Sign In</button>
                         <p class="auth-switch-text">Don't have an account? <a href="#" id="linkToSignUp">Create one now</a></p>
@@ -321,7 +430,7 @@
                 <form id="signUpForm" class="auth-form hidden">
                     <div class="form-group">
                         <label for="signUpName">Full Name</label>
-                        <input type="text" id="signUpName" required placeholder="e.g. Arnav Kamat">
+                        <input type="text" id="signUpName" required placeholder="e.g. John Doe">
                     </div>
                     <div class="form-group">
                         <label for="signUpPhone">Mobile Number</label>
