@@ -12,6 +12,12 @@ To try fleet management, choose **Administrator** at sign-in and use
 `admin@goabus.demo` / `GoaBusDemo!`. This public demo credential is not secure:
 bus schedules, bookings, and the simulated sign-in are stored only in your
 browser and are not shared with other visitors.
+The demo administrator credentials are intentionally public and are not secrets.
+The Pages site is static: it cannot read `.env` files or keep API keys private.
+`.gitignore` excludes local environment files from future commits, but does not
+remove values already present in public source or deployment history. Keep real
+API keys in a backend host's environment settings, never in browser JavaScript,
+HTML, or a GitHub Pages build.
 
 ---
 

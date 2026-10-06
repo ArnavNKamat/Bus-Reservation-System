@@ -28,7 +28,10 @@ wheels/
 venv/
 env/
 ENV/
+# Local environment files may contain credentials; never commit real secrets.
 .env
+.env.*
+!.env.example
 /site/
 data/*.json
 
