@@ -94,9 +94,11 @@ GitHub Pages is free for public repositories and can host the interactive
 frontend as a static portfolio demo. GitHub cannot run the Flask backend, so
 the Pages build uses a browser-only mock API instead:
 
-1. Push your changes to the repository's `main` branch.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+1. In the repository, open **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** before
+   the first deployment.
+3. Push changes to the repository's `main` branch. The included workflow builds
+   and deploys the demo on every push.
 4. Open the **Actions** tab and wait for **Deploy portfolio demo to GitHub Pages**
    to complete.
 5. Share the URL shown in **Settings → Pages**. It will usually look like
