@@ -29,6 +29,8 @@ venv/
 env/
 ENV/
 .env
+/site/
+data/*.json
 
 # IDE and editor files
 .idea/

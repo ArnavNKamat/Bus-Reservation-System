@@ -39,10 +39,14 @@ BusReservationSystem/
 ├── web/                                  # 🚀 Web Application
 │   ├── static/
 │   │   ├── css/style.css                 # Modern responsive CSS
-│   │   └── js/app.js                     # Frontend interactive controller
+│   │   └── js/
+│   │       ├── app.js                    # Frontend interactive controller
+│   │       └── demo-api.js               # Browser-only API for GitHub Pages
 │   ├── templates/
 │   │   └── index.html                    # Single-Page App (SPA) template
 │   └── app.py                            # Flask server and REST APIs
+├── scripts/build_pages.py                # Build static GitHub Pages demo
+├── .github/workflows/pages.yml           # Deploy demo on pushes to main
 ├── requirements.txt                      # Project dependencies
 ├── run_web.py                            # Web app launcher
 ├── main.py                               # Terminal CLI launcher
@@ -84,26 +88,29 @@ python main.py
 
 ---
 
-## 🌐 Deploy a Public Demo
+## 🌐 Deploy a Free GitHub Pages Demo
 
-This is a Flask application, so GitHub Pages cannot host its API or interactive
-features. The included `render.yaml` configures a demo deployment on Render,
-using this GitHub repository as its source:
+GitHub Pages is free for public repositories and can host the interactive
+frontend as a static portfolio demo. GitHub cannot run the Flask backend, so
+the Pages build uses a browser-only mock API instead:
 
-1. Push the project to GitHub.
-2. In Render, choose **New → Blueprint** and connect the repository.
-3. Review and apply the `bus-reservation-system` service.
-4. When deployment finishes, open the public `onrender.com` URL and share it.
+1. Push your changes to the repository's `main` branch.
+2. In the repository, open **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Open the **Actions** tab and wait for **Deploy portfolio demo to GitHub Pages**
+   to complete.
+5. Share the URL shown in **Settings → Pages**. It will usually look like
+   `https://arnavnkamat.github.io/Bus-Reservation-System/`.
 
-The hosted demo stores generated schedules, demo accounts, and test bookings
-under `/tmp`. That storage is temporary and may reset when the service restarts;
-it is not suitable for real reservations or payment information. Payments are
-simulated.
+The demo includes sample bus schedules, seat selection, simulated sign-in,
+browser-local test bookings and cancellations, and occupancy reports. It does
+not contact the Flask API, process payments, or save data to a server. Demo
+bookings remain in that browser's local storage and can be cleared by resetting
+the browser's site data.
 
-**Before connecting this repository to a public hosting service, remove or
-anonymize any personal information in tracked files and Git history.** The
-committed JSON data files may contain account and reservation details. Do not
-use real customer data, credentials, or payment information in this demo.
+**Do not enter real personal, account, or payment information.** GitHub Pages
+publishes only the generated `site/` directory; it does not publish the
+repository's `data/` JSON files.
 
 ---
 

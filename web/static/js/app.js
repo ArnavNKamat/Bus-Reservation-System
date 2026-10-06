@@ -36,7 +36,9 @@ const elements = {
     // Search & Filter
     searchForm: document.getElementById('busSearchForm'),
     fromSelect: document.getElementById('fromSelect'),
+    fromSearch: document.getElementById('fromSearch'),
     toSelect: document.getElementById('toSelect'),
+    toSearch: document.getElementById('toSearch'),
     dateSelect: document.getElementById('dateSelect'),
     typeFilter: document.getElementById('typeFilter'),
     swapLocationsBtn: document.getElementById('swapLocationsBtn'),
@@ -135,6 +137,10 @@ function showToast(message, type = 'success') {
 // -------------------------------------------------------------
 async function apiCall(endpoint, options = {}) {
     try {
+        if (window.DEMO_MODE && typeof window.demoApiCall === 'function') {
+            return await window.demoApiCall(endpoint, options);
+        }
+
         const response = await fetch(endpoint, {
             headers: {
                 'Content-Type': 'application/json',
@@ -359,10 +365,12 @@ async function loadLocations() {
     const data = await apiCall('/api/locations');
     if (data.success) {
         state.locations = data;
+        const sortedSources = [...data.sources].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+        const sortedDestinations = [...data.destinations].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
         // Populate From
         elements.fromSelect.innerHTML = '<option value="">All Goa Towns & Villages (Origin)</option>';
-        data.sources.forEach(town => {
+        sortedSources.forEach(town => {
             const opt = document.createElement('option');
             opt.value = town;
             opt.textContent = town;
@@ -371,27 +379,26 @@ async function loadLocations() {
 
         // Populate To
         elements.toSelect.innerHTML = '<option value="">All Destinations</option>';
-
-        const goaGroup = document.createElement('optgroup');
-        goaGroup.label = 'Goa Towns & Coastal Villages';
-        data.sources.forEach(town => {
+        sortedDestinations.forEach(destination => {
             const opt = document.createElement('option');
-            opt.value = town;
-            opt.textContent = town;
-            goaGroup.appendChild(opt);
+            opt.value = destination;
+            opt.textContent = destination;
+            elements.toSelect.appendChild(opt);
         });
-        elements.toSelect.appendChild(goaGroup);
 
-        const outstationGroup = document.createElement('optgroup');
-        outstationGroup.label = 'Outstation Interstate Destinations';
-        data.outstation.forEach(city => {
-            const opt = document.createElement('option');
-            opt.value = city;
-            opt.textContent = city;
-            outstationGroup.appendChild(opt);
-        });
-        elements.toSelect.appendChild(outstationGroup);
+        filterLocationOptions(elements.fromSelect, elements.fromSearch.value);
+        filterLocationOptions(elements.toSelect, elements.toSearch.value);
     }
+}
+
+function filterLocationOptions(select, query) {
+    const normalizedQuery = query.trim().toLocaleLowerCase();
+    Array.from(select.options).forEach(option => {
+        option.hidden = Boolean(normalizedQuery) &&
+            Boolean(option.value) &&
+            option !== select.selectedOptions[0] &&
+            !option.textContent.toLocaleLowerCase().includes(normalizedQuery);
+    });
 }
 
 // -------------------------------------------------------------
@@ -687,7 +694,9 @@ async function handleBookingSubmit(e) {
 
     // Set loading state
     elements.confirmBookingBtn.disabled = true;
-    elements.confirmBookingBtnText.textContent = 'Processing Payment & Booking...';
+    elements.confirmBookingBtnText.textContent = window.DEMO_MODE
+        ? 'Creating demo booking...'
+        : 'Processing Payment & Booking...';
 
     const transactionId = `TXN-${Date.now().toString().slice(-8)}`;
 
@@ -707,14 +716,21 @@ async function handleBookingSubmit(e) {
     });
 
     elements.confirmBookingBtn.disabled = false;
-    elements.confirmBookingBtnText.textContent = 'Pay & Confirm Booking';
+    elements.confirmBookingBtnText.textContent = window.DEMO_MODE
+        ? 'Create Demo Booking'
+        : 'Pay & Confirm Booking';
 
     if (data.success) {
         elements.checkoutModal.classList.add('hidden');
         elements.passengerForm.reset();
         state.selectedSeats.clear();
 
-        showToast('Payment Successful! E-Ticket Generated.', 'success');
+        showToast(
+            window.DEMO_MODE
+                ? 'Demo booking created. No payment was processed.'
+                : 'Payment Successful! E-Ticket Generated.',
+            'success'
+        );
         renderTicketReceipt(data.reservation, data.bus_details);
         elements.ticketModal.classList.remove('hidden');
 
@@ -741,11 +757,11 @@ function renderTicketReceipt(reservation, busDetails) {
         <div class="ticket-card">
             <div class="ticket-header">
                 <div>
-                    <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85;">GOA EXPRESS • OFFICIAL E-TICKET</div>
+                    <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85;">GOA EXPRESS • ${window.DEMO_MODE ? 'DEMO TICKET' : 'OFFICIAL E-TICKET'}</div>
                     <div class="ticket-booking-id">${reservation.booking_id}</div>
                 </div>
                 <div style="text-align:right;">
-                    <span class="badge badge-success">Confirmed & Paid</span>
+                    <span class="badge badge-success">${window.DEMO_MODE ? 'Demo booking' : 'Confirmed & Paid'}</span>
                 </div>
             </div>
 
@@ -1086,8 +1102,16 @@ function setupEventListeners() {
 
     elements.resetSearchBtn.addEventListener('click', () => {
         elements.searchForm.reset();
+        filterLocationOptions(elements.fromSelect, '');
+        filterLocationOptions(elements.toSelect, '');
         init3DayDateSelector();
         fetchBuses();
+    });
+    elements.fromSearch.addEventListener('input', () => {
+        filterLocationOptions(elements.fromSelect, elements.fromSearch.value);
+    });
+    elements.toSearch.addEventListener('input', () => {
+        filterLocationOptions(elements.toSelect, elements.toSearch.value);
     });
 
     // Swap From and To
@@ -1103,6 +1127,10 @@ function setupEventListeners() {
         if (canSwapToFrom || !toVal) {
             elements.fromSelect.value = toVal;
             elements.toSelect.value = fromVal;
+            elements.fromSearch.value = '';
+            elements.toSearch.value = '';
+            filterLocationOptions(elements.fromSelect, '');
+            filterLocationOptions(elements.toSelect, '');
             fetchBuses();
         } else {
             showToast(`${toVal} is an outstation destination and cannot be selected as Goa origin.`, 'error');
