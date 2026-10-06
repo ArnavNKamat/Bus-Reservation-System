@@ -14,17 +14,25 @@ def main():
     asset_version = os.environ.get("GITHUB_SHA", "local")
     css_template_ref = "{{ url_for('static', filename='css/style.css') }}"
     js_template_ref = "{{ url_for('static', filename='js/app.js') }}"
+    logo_template_ref = "{{ url_for('static', filename='logo.png') }}"
 
-    if html.count(css_template_ref) != 1 or html.count(js_template_ref) != 1:
-        raise RuntimeError("Expected exactly one Flask CSS and JavaScript asset reference.")
+    if (
+        html.count(css_template_ref) != 1
+        or html.count(js_template_ref) != 1
+        or html.count(logo_template_ref) != 2
+    ):
+        raise RuntimeError("Expected the Flask CSS, JavaScript, and logo asset references.")
 
     html = html.replace(css_template_ref, f"static/css/style.css?v={asset_version}")
+    html = html.replace(logo_template_ref, f"static/logo.png?v={asset_version}")
     html = html.replace(
         js_template_ref,
         f'static/js/demo-api.js?v={asset_version}"></script>\n'
         f'    <script src="static/js/app.js?v={asset_version}',
     )
     html = html.replace("🌴 Official Goa Travel Portal", "🌴 Interactive Portfolio Demo")
+    html = html.replace("Goa Express", "GoaBus")
+    html = html.replace("GOA EXPRESS", "GOABUS")
     html = html.replace("Instant E-Tickets", "Sample E-Tickets")
     html = html.replace(
         "Secure UPI, Card & Net Banking payments",
@@ -46,6 +54,9 @@ def main():
     (OUTPUT / ".nojekyll").touch()
     target_static = OUTPUT / "static"
     shutil.copytree(STATIC, target_static, dirs_exist_ok=True)
+    app_script = target_static / "js" / "app.js"
+    app_js = app_script.read_text(encoding="utf-8").replace("GOA EXPRESS •", "GOABUS •")
+    app_script.write_text(app_js, encoding="utf-8")
 
 
 if __name__ == "__main__":

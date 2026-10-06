@@ -1,10 +1,10 @@
-# 🚌 Goa Express - Bus Reservation System
+# 🚌 GoaBus - Bus Reservation System
 
 An end-to-end Bus Reservation System built in Python with both a Terminal (CLI) interface and a modern Single-Page Web Application (SPA).
 
 ## 🌐 Live Demo
 
-**[Open the Goa Express Bus Reservation demo](https://arnavnkamat.github.io/Bus-Reservation-System/)**
+**[Open the GoaBus Reservation demo](https://arnavnkamat.github.io/Bus-Reservation-System/)**
 
 This is a browser-only portfolio demo. Sign-in, bookings, and payments are
 simulated; please do not enter real personal or payment information.
@@ -45,6 +45,7 @@ BusReservationSystem/
 │   └── exceptions.py                     # Custom domain exceptions
 ├── web/                                  # 🚀 Web Application
 │   ├── static/
+│   │   ├── logo.png                      # GoaBus logo and favicon
 │   │   ├── css/style.css                 # Modern responsive CSS
 │   │   └── js/
 │   │       ├── app.js                    # Frontend interactive controller

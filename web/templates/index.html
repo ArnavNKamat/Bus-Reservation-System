@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goa Express - Bus Reservation System</title>
+    <title>GoaBus - Bus Reservation System</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,19 +14,9 @@
     <!-- Top Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
-            <div class="brand" id="brandLogo">
-                <div class="brand-icon">
-                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="16" rx="4"></rect>
-                        <path d="M3 10h18"></path>
-                        <circle cx="7" cy="15" r="1.5" fill="currentColor"></circle>
-                        <circle cx="17" cy="15" r="1.5" fill="currentColor"></circle>
-                        <path d="M5 19v2"></path>
-                        <path d="M19 19v2"></path>
-                    </svg>
-                </div>
+            <div class="brand" id="brandLogo" aria-label="GoaBus">
+                <img class="brand-logo" src="{{ url_for('static', filename='logo.png') }}" alt="GoaBus - State and Interstate Bus Network">
                 <div class="brand-text">
-                    <span class="brand-title">Goa Express</span>
                     <span class="brand-subtitle">State & Interstate Bus Network</span>
                 </div>
             </div>
@@ -201,7 +192,7 @@
                         <p class="results-subtitle" id="resultsCount">Loading schedules...</p>
                     </div>
                     <div class="quick-filter-badges">
-                        <span class="badge badge-info" id="activeFilterBadge">Fixed Schedule (3-Day Horizon)</span>
+                        <span class="badge badge-info" id="activeFilterBadge"></span>
                     </div>
                 </div>
 
@@ -619,11 +610,11 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-links">
-                <strong>Goa Express Bus Reservation Portal</strong>
+                <strong>GoaBus Reservation Portal</strong>
                 <span>• Official Timetable System</span>
                 <span>• 12-Hour AM/PM Real-Time Scheduling</span>
             </div>
-            <p>© 2026 Goa Express Bus Network. Developed by Arnav Kamat.</p>
+            <p>&copy; 2026 GoaBus. Developed by Arnav Kamat.</p>
         </div>
     </footer>
 

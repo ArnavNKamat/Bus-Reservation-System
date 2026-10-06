@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Goa Express - Bus Reservation System Stylesheet
+   GoaBus - Bus Reservation System Stylesheet
    Modern, Clean, Responsive & Feature-Rich Design
    ========================================================================== */
 
@@ -98,16 +98,12 @@ body {
     cursor: pointer;
 }
 
-.brand-icon {
-    width: 44px;
-    height: 44px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white;
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px var(--primary-glow);
+.brand-logo {
+    display: block;
+    width: 150px;
+    height: 68px;
+    flex: 0 0 auto;
+    object-fit: contain;
 }
 
 .brand-title {
